@@ -1,4 +1,5 @@
 const revealItems = [...document.querySelectorAll("[data-reveal]")];
+const timelineItems = [...document.querySelectorAll('input[name="gallery-item"]')];
 
 if (revealItems.length) {
   const revealObserver = new IntersectionObserver(
@@ -18,5 +19,14 @@ if (revealItems.length) {
   revealItems.forEach((item, index) => {
     item.style.transitionDelay = `${index * 90}ms`;
     revealObserver.observe(item);
+  });
+}
+
+if (timelineItems.length) {
+  const currentMonthIndex = new Date().getMonth();
+  const activeIndex = Math.min(currentMonthIndex, timelineItems.length - 1);
+
+  timelineItems.forEach((item, index) => {
+    item.checked = index === activeIndex;
   });
 }
