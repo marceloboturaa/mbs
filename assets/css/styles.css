@@ -542,20 +542,23 @@ $10.9rem;
 
 @media print {
   @page {
-    margin: 16mm 14mm;
+    size: A4 portrait;
+    margin: 10mm 12mm;
   }
 
+  html,
   body {
     position: relative;
+    min-height: auto;
     background: #ffffff;
   }
 
   body::after {
     content: "@sabormatematica";
     position: fixed;
-    right: 2mm;
-    top: 50%;
-    transform: translateY(-50%) rotate(180deg);
+    right: 1mm;
+    top: 10mm;
+    transform: rotate(180deg);
     writing-mode: vertical-rl;
     color: rgba(24, 24, 24, 0.55);
     font-size: 10pt;
@@ -566,6 +569,8 @@ $10.9rem;
     width: 100%;
     margin: 0;
     padding: 0;
+    min-height: auto;
+    display: block;
   }
 
   .site-nav,
@@ -575,25 +580,56 @@ $10.9rem;
   }
 
   .hero {
-    margin-bottom: 1rem;
+    margin-bottom: 0.35rem;
   }
 
   .exercise-card {
-    break-inside: avoid;
+    break-inside: auto;
+  }
+
+  .exercise-meta {
+    margin-bottom: 0.85rem;
+  }
+
+  .question-block {
+    margin-bottom: 1rem;
+  }
+
+  .solution-block {
+    gap: 0.55rem;
   }
 
   .step-row {
     grid-template-columns: 1fr;
-    gap: 0.4rem;
-    break-inside: avoid;
+    gap: 0.2rem;
+    break-inside: auto;
   }
 
   .step-text {
     padding-top: 0;
+    margin: 0;
+    line-height: 1.35;
+    font-size: 0.88rem;
+  }
+
+  .step-formula mjx-container[display="true"] {
+    margin: 0.2rem 0 !important;
+  }
+
+  .statement,
+  .exercise-meta span,
+  .reference-inline p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .solution-end {
+    margin-top: 0.1rem;
   }
 
   .reference-inline {
-    margin-top: 1rem;
+    margin-top: 0.7rem;
+    padding-top: 0.45rem;
   }
 
   a,
