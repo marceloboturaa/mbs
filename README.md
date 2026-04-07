@@ -24,6 +24,8 @@ O projeto organiza exercícios resolvidos de equações diferenciais em páginas
 
 ## Estrutura
 
+- esolucoes/calculo-3/: páginas individuais das resoluções atuais
+
 - `index.html`: página inicial do site
 - `exercicios.html`: lista de exercícios com buscador
 - `notas-de-aula.html`: página reservada para notas de aula
@@ -50,4 +52,6 @@ O projeto organiza exercícios resolvidos de equações diferenciais em páginas
 
 ## Observação
 
-Cada exercício possui uma página própria. A listagem principal fica em `exercicios.html`.
+Cada exercício possui uma página própria. A listagem principal fica em `exercicios.html`, e as resoluções atuais estão organizadas em `resolucoes/calculo-3/equacoes-diferenciais/`.
+
+

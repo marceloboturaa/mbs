@@ -517,3 +517,88 @@ $10.9rem;
 
 
 
+
+.exercise-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 1rem;
+}
+
+.print-button {
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.print-button:hover,
+.print-button:focus-visible {
+  background: #f4f1ea;
+}
+
+@media print {
+  @page {
+    margin: 16mm 14mm;
+  }
+
+  body {
+    position: relative;
+    background: #ffffff;
+  }
+
+  body::after {
+    content: "@sabormatematica";
+    position: fixed;
+    right: 2mm;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+    writing-mode: vertical-rl;
+    color: rgba(24, 24, 24, 0.55);
+    font-size: 10pt;
+    letter-spacing: 0.08em;
+  }
+
+  .page {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .site-nav,
+  .site-footer,
+  .exercise-actions {
+    display: none !important;
+  }
+
+  .hero {
+    margin-bottom: 1rem;
+  }
+
+  .exercise-card {
+    break-inside: avoid;
+  }
+
+  .step-row {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+    break-inside: avoid;
+  }
+
+  .step-text {
+    padding-top: 0;
+  }
+
+  .reference-inline {
+    margin-top: 1rem;
+  }
+
+  a,
+  a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+}
