@@ -20,6 +20,12 @@ body {
   background: var(--paper);
 }
 
+body.home-page {
+  background:
+    radial-gradient(circle at top left, rgba(149, 171, 146, 0.14), transparent 38%),
+    linear-gradient(180deg, #fbfaf6 0%, #f4f7f3 100%);
+}
+
 a {
   color: inherit;
 }
@@ -30,12 +36,25 @@ p {
 }
 
 .page {
+  position: relative;
+  z-index: 1;
   width: min(760px, calc(100% - 2rem));
   margin: 0 auto;
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   padding: 1rem 0 0;
+}
+
+.site-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  pointer-events: none;
 }
 
 .site-nav {
@@ -82,15 +101,74 @@ p {
   border-bottom: 0;
 }
 
+.home-warning {
+  position: fixed;
+  left: 50%;
+  top: 8rem;
+  z-index: 2;
+  width: fit-content;
+  max-width: min(calc(100vw - 2rem), 24rem);
+  margin: 0;
+  padding: 0.5rem 1rem;
+  color: #6f4a10;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  text-align: center;
+  border: 1px solid rgba(111, 74, 16, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 246, 228, 0.9);
+  box-shadow: 0 12px 28px rgba(111, 74, 16, 0.14);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate3d(-50%, 12px, 0) scale(0.96);
+  filter: blur(6px);
+  transition: opacity 420ms ease, transform 420ms ease, filter 420ms ease;
+}
+
+.home-warning.is-warning-hidden {
+  opacity: 0;
+  transform: translate3d(-50%, 12px, 0) scale(0.96);
+  filter: blur(6px);
+}
+
+.home-warning.is-warning-visible {
+  opacity: 1;
+  transform: translate3d(-50%, 0, 0) scale(1);
+  filter: blur(0);
+  animation: warning-float 950ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes warning-float {
+  0% {
+    opacity: 0;
+    transform: translate3d(-50%, 16px, 0) scale(0.94);
+    filter: blur(8px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(-50%, -2px, 0) scale(1.01);
+    filter: blur(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(-50%, 0, 0) scale(1);
+    filter: blur(0);
+  }
+}
+
 .hero-compact {
   margin-bottom: 1rem;
 }
 
 .hero-home {
   display: flex;
+  align-items: flex-end;
   justify-content: center;
-  align-items: center;
-  min-height: 58vh;
+  min-height: calc(100vh - 11rem);
+  min-height: calc(100dvh - 11rem);
+  padding: 2rem 0 0.15rem;
 }
 
 .eyebrow {
@@ -139,10 +217,12 @@ h2 {
 }
 
 .home-quote {
+  position: relative;
+  z-index: 1;
   width: 100%;
-  max-width: 40rem;
+  max-width: 34rem;
   margin: 0;
-  padding: 0 0.75rem;
+  padding: 0;
   border: 0;
   text-align: center;
 }
@@ -151,9 +231,38 @@ h2 {
   margin: 0;
   color: var(--ink);
   font-family: "STIX Two Text", "Times New Roman", serif;
-  font-size: clamp(1.05rem, 2.05vw, 1.6rem);
-  line-height: 1.52;
+  font-size: clamp(0.95rem, 1.5vw, 1.12rem);
+  line-height: 1.45;
   font-weight: 400;
+  text-wrap: balance;
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+  transition: opacity 320ms ease, transform 320ms ease, filter 320ms ease;
+}
+
+.home-quote p.is-quote-hidden {
+  opacity: 0;
+  transform: translateY(10px);
+  filter: blur(6px);
+}
+
+.home-quote p.is-quote-visible {
+  animation: quote-settle 520ms ease-out;
+}
+
+@keyframes quote-settle {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+    filter: blur(8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
 }
 
 .home-quote p + p {
@@ -448,8 +557,9 @@ h2 {
 
 @media (max-width: 640px) {
   .page {
-    width: calc(100% - 1rem);
-    padding-top: 0.75rem;
+    width: calc(100% - 0.9rem);
+    min-height: 100dvh;
+    padding-top: 0.6rem;
   }
 
   h1 {
@@ -459,7 +569,8 @@ h2 {
   .site-nav {
     width: 100%;
     gap: 0.35rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.85rem;
+    padding: 0.3rem;
     align-self: center;
     justify-content: center;
   }
@@ -468,6 +579,8 @@ h2 {
   .nav-link.is-disabled {
     flex: 1 1 auto;
     text-align: center;
+    font-size: 0.92rem;
+    padding: 0.45rem 0.4rem;
   }
 
   .exercise-tools {
@@ -497,16 +610,38 @@ h2 {
   }
 
   .hero-home {
-    min-height: 48vh;
+    min-height: calc(100dvh - 9.25rem);
+    align-items: flex-end;
+    padding: 1.2rem 0.2rem 0.15rem;
+  }
+
+  .home-warning {
+    max-width: min(calc(100vw - 1rem), 18rem);
+    padding: 0.42rem 0.72rem;
+    font-size: 0.8rem;
+    line-height: 1.28;
   }
 
   .home-quote {
-    padding: 0 0.2rem;
+    max-width: min(100%, 21rem);
   }
 
   .home-quote p {
-    font-size: 1.14rem;
-    line-height: 1.58;
+    font-size: 0.92rem;
+    line-height: 1.44;
+  }
+
+  .home-quote-author {
+    margin-top: 0.7rem;
+    font-size: 0.92rem;
+  }
+
+  .site-footer {
+    padding-top: 0.4rem;
+  }
+
+  .site-footer p {
+    font-size: 0.88rem;
   }
 
   .exercise-meta {
@@ -553,7 +688,9 @@ h2 {
 
   .site-nav,
   .site-footer,
-  .exercise-actions {
+  .exercise-actions,
+  .site-canvas,
+  .home-warning {
     display: none !important;
   }
 

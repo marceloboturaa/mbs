@@ -17,12 +17,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=STIX+Two+Text:wght@400;500&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
-  <meta http-equiv="refresh" content="10; url=buscador-resolucoes.html">
-  <script>
-    window.setTimeout(() => {
-      window.location.href = "buscador-resolucoes.html";
-    }, 10000);
-  </script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -42,7 +36,8 @@
     }
   </script>
 </head>
-<body>
+<body class="home-page">
+  <canvas class="site-canvas js-home-canvas" aria-hidden="true"></canvas>
   <main class="page">
     <nav class="site-nav" aria-label="Menu principal">
       <a class="nav-link is-current" href="index.html">In&iacute;cio</a>
@@ -51,9 +46,12 @@
       <span class="nav-link is-disabled" aria-disabled="true">Resumos</span>
     </nav>
 
+    <p class="home-warning js-home-warning-text"></p>
+
     <header class="hero hero-home">
       <blockquote class="home-quote" cite="Marcelo Botura Souza, 2026">
-        <p>&ldquo;Podem me chamar de burro, eu mesmo me sinto assim quando olho para o quadro. Mas a minha mente est&aacute; saindo da margem de erro para buscar a precis&atilde;o absoluta. O pior da sala hoje &eacute; s&oacute; o rascunho da minha melhor vers&atilde;o, que vou calcular amanh&atilde;.&rdquo; (Marcelo, 2026)</p>
+        <p class="js-home-quote-text"></p>
+        <footer class="home-quote-author">Marcelo</footer>
       </blockquote>
     </header>
 
@@ -61,5 +59,6 @@
       <p>@sabormatematica | 2026</p>
     </footer>
   </main>
+  <script src="assets/js/home-squid.js"></script>
 </body>
 </html>
