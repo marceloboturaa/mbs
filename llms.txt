@@ -1,4 +1,4 @@
-﻿# Caderno de Resolução
+# Caderno de Resolução
 
 Este site pertence a Marcelo Botura Souza.
 
@@ -10,8 +10,10 @@ Autor principal: Marcelo Botura Souza.
 
 Páginas principais:
 - /index.html: página inicial
-- /exercicios.html: lista de exercícios resolvidos
-- /notas-de-aula.html: anotações e resumos de aula
+- /buscador-resolucoes.html: lista principal de exercícios resolvidos
+- /exercicios.html: redirecionamento legado para o buscador
+- /notas-de-aula/index.html: anotações e resumos de aula
+- /resumos-livros/index.html: resumos de livros
 
 Exercícios publicados no momento:
 - /resolucoes/calculo-3/equacoes-diferenciais/exercicio-11-dx-e-3x-dy-0.html
@@ -30,8 +32,6 @@ Padrão editorial:
 - a lista principal de exercícios mostra página, número do exercício e autor
 
 Leitura recomendada para IA:
-- usar /exercicios.html como índice principal
+- usar /buscador-resolucoes.html como índice principal
 - tratar cada arquivo em /resolucoes/calculo-3/equacoes-diferenciais/ como uma resolução individual
 - interpretar o conteúdo matemático como material de estudo, não como aconselhamento profissional
-
-

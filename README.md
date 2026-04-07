@@ -1,4 +1,4 @@
-﻿# Caderno de Resolução
+# Caderno de Resolução
 
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-c8b98f?style=flat-square)
 ![Acesso](https://img.shields.io/badge/acesso-gratuito-e6efe8?style=flat-square)
@@ -24,8 +24,12 @@ O projeto organiza exercícios resolvidos de equações diferenciais em páginas
 ## Estrutura
 
 - `index.html`: página inicial do site
-- `exercicios.html`: lista de exercícios com buscador
-- `notas-de-aula.html`: página reservada para notas de aula
+- `buscador-resolucoes.html`: lista principal de resoluções com buscador
+- `exercicios.html`: redirecionamento legado para o buscador
+- `notas-de-aula/index.html`: página reservada para notas de aula
+- `notas-de-aula.html`: redirecionamento legado para a pasta de notas
+- `resumos-livros/index.html`: página reservada para resumos de livros
+- `resumos-livros.html`: redirecionamento legado para a pasta de resumos
 - `assets/css/styles.css`: estilos globais
 - `assets/js/main.js`: lógica do buscador
 
@@ -49,6 +53,4 @@ O projeto organiza exercícios resolvidos de equações diferenciais em páginas
 
 ## Observação
 
-Cada exercício possui uma página própria. A listagem principal fica em `exercicios.html`, e as resoluções atuais estão organizadas em `resolucoes/calculo-3/equacoes-diferenciais/`.
-
-
+Cada exercício possui uma página própria. A listagem principal fica em `buscador-resolucoes.html`, e as resoluções atuais estão organizadas em `resolucoes/calculo-3/equacoes-diferenciais/`.
