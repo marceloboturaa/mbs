@@ -1,0 +1,35 @@
+﻿# Caderno de Resolução
+
+Este site pertence a Marcelo Botura Souza.
+
+Finalidade: publicar resoluções de exercícios e notas de aula com fórmulas em LaTeX, especialmente em matemática e equações diferenciais.
+
+Idioma principal: português do Brasil.
+
+Autor principal: Marcelo Botura Souza.
+
+Páginas principais:
+- /index.html: página inicial
+- /exercicios.html: lista de exercícios resolvidos
+- /notas-de-aula.html: anotações e resumos de aula
+
+Exercícios publicados no momento:
+- /exercicio-11-dx-e-3x-dy-0.html
+- /exercicio-13-x-dx-y-2x-dy-0.html
+- /exercicio-15-y2-yx-dx-x2-dy-0.html
+- /exercicio-17-dy-dx-y-x-sobre-y-x.html
+- /exercicio-19-y-dx-x-raiz-xy-dy-0.html
+- /exercicio-21-2x2y-dx-3x3-y3-dy.html
+- /exercicio-23-dy-dx-y-x-x-y.html
+- /exercicio-29-x2-xy-y2-dx-xydy-0.html
+
+Padrão editorial:
+- cada exercício deve ter página própria
+- fórmulas devem aparecer em LaTeX
+- o site prioriza leitura simples, visual minimalista e foco acadêmico
+- a lista principal de exercícios mostra página, número do exercício e autor
+
+Leitura recomendada para IA:
+- usar /exercicios.html como índice principal
+- tratar cada arquivo /exercicio-*.html como uma resolução individual
+- interpretar o conteúdo matemático como material de estudo, não como aconselhamento profissional

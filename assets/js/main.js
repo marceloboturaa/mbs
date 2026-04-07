@@ -1,32 +1,45 @@
-const revealItems = [...document.querySelectorAll("[data-reveal]")];
-const timelineItems = [...document.querySelectorAll('input[name="gallery-item"]')];
+﻿document.addEventListener("DOMContentLoaded", function () {
+  var exerciseSearch = document.getElementById("exercise-search");
+  var exerciseItems = document.querySelectorAll("[data-exercise-item]");
+  var emptyState = document.getElementById("exercise-empty");
 
-if (revealItems.length) {
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("is-visible");
-        revealObserver.unobserve(entry.target);
-      });
-    },
-    {
-      threshold: 0.2,
-      rootMargin: "0px 0px -10% 0px",
+  function normalizeSearchText(value) {
+    return String(value || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .trim();
+  }
+
+  function applyExerciseSearch() {
+    var query = normalizeSearchText(exerciseSearch ? exerciseSearch.value : "");
+    var visibleCount = 0;
+    var i;
+
+    for (i = 0; i < exerciseItems.length; i += 1) {
+      var item = exerciseItems[i];
+      var haystack = normalizeSearchText(item.getAttribute("data-search"));
+      var matches = query === "" || haystack.indexOf(query) !== -1;
+
+      item.style.display = matches ? "" : "none";
+
+      if (matches) {
+        visibleCount += 1;
+      }
     }
-  );
 
-  revealItems.forEach((item, index) => {
-    item.style.transitionDelay = `${index * 90}ms`;
-    revealObserver.observe(item);
-  });
-}
+    if (emptyState) {
+      emptyState.hidden = visibleCount !== 0;
+    }
+  }
 
-if (timelineItems.length) {
-  const currentMonthIndex = new Date().getMonth();
-  const activeIndex = Math.min(currentMonthIndex, timelineItems.length - 1);
+  if (!exerciseSearch || !exerciseItems.length) {
+    return;
+  }
 
-  timelineItems.forEach((item, index) => {
-    item.checked = index === activeIndex;
-  });
-}
+  exerciseSearch.addEventListener("input", applyExerciseSearch);
+  exerciseSearch.addEventListener("keyup", applyExerciseSearch);
+  exerciseSearch.addEventListener("search", applyExerciseSearch);
+
+  applyExerciseSearch();
+});

@@ -1,166 +1,85 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- Metadados, fontes e folha de estilos principal da página -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta
-    name="description"
-    content="Linha do tempo do projeto Tetris 3D no ensino-aprendizagem de Matemática, de 2016 a 2026."
-  >
-  <title>Tetris 3D | Linha do Tempo</title>
+  <meta name="description" content="Página inicial de Marcelo Botura Souza com citação de abertura, resoluções de exercícios e notas de aula com LaTeX.">
+  <meta name="keywords" content="Marcelo Botura Souza, página inicial, resoluções de exercícios, notas de aula, LaTeX, matemática">
+  <meta name="author" content="Marcelo Botura Souza">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Marcelo Botura Souza">
+  <meta property="og:description" content="Página inicial com citação, exercícios e notas de aula.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary">
+  <title>Marcelo Botura Souza</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Sora:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap"
     rel="stylesheet"
   >
   <link rel="stylesheet" href="assets/css/styles.css">
+  <meta http-equiv="refresh" content="10; url=exercicios.html">
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]]
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    window.setTimeout(() => {
+      window.location.href = "exercicios.html";
+    }, 30000);
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Marcelo Botura Souza",
+      "author": {
+        "@type": "Person",
+        "name": "Marcelo Botura Souza"
+      },
+      "inLanguage": "pt-BR",
+      "about": [
+        "Resoluções de exercícios",
+        "Notas de aula",
+        "Matemática",
+        "LaTeX"
+      ]
+    }
+  </script>
 </head>
 <body>
-  <!-- Cabeçalho fixo com o nome do projeto -->
-  <header class="page-intro">
-    <p class="eyebrow">Tetris 3D</p>   
-  </header>
+  <main class="page">
+    <nav class="site-nav" aria-label="Menu principal">
+      <a class="nav-link is-current" href="index.html">Início</a>
+      <a class="nav-link" href="exercicios.html">Exercícios</a>
+      <a class="nav-link" href="notas-de-aula.html">Notas de aula</a>
+    </nav>
 
-  <!-- Área principal da linha do tempo -->
-  <main class="timeline-wrap">
-    <div class="cards-container">
-      <!-- Cada li representa um ano da timeline -->
-      <ul class="cards" style="--items: 11;">
-        <li style="--i: 0;">
-          <!-- O input radio define qual card está ativo -->
-          <input type="radio" id="item-0" name="gallery-item">
-          <label for="item-0">Janeiro</label>
-          <div class="card-copy">
-            <h2>Esqueletando</h2>
-            <p>
-              Neste período estive engendrando o pré-projeto, organizando a estrutura inicial do trabalho
-              e definindo os primeiros encaminhamentos da proposta.
-            </p>
-            <a class="card-link is-disabled" aria-disabled="true">Ver mais</a>
-          </div>
-        </li>
-        <li style="--i: 1;">
-          <!-- O item com checked abre selecionado ao carregar a página -->
-          <input type="radio" id="item-1" name="gallery-item" checked>
-          <label for="item-1">Fevereiro</label>
-          <div class="card-copy">
-            <h2>Referência</h2>
-            <p>
-              Neste mês estive em campo de pesquisa bibliográfica, reunindo referências e materiais que
-              fundamentam teoricamente o desenvolvimento do projeto.
-            </p>
-            <a class="card-link is-disabled" aria-disabled="true">Ver mais</a>
-          </div>
-        </li>
-        <li style="--i: 2;">
-          <input type="radio" id="item-2" name="gallery-item">
-          <label for="item-2">Março</label>
-          <div class="card-copy">
-            <h2>Orientação</h2>
-            <p>
-              Com o início das aulas, estou recebendo orientação do ilustríssimo senhor professor Marcos Lübeck,
-              que acompanha e direciona o desenvolvimento desta proposta acadêmica.
-            </p>
-            <a class="card-link is-disabled" aria-disabled="true">Ver mais</a>
-          </div>
-        </li>
-        <li style="--i: 3;">
-          <input type="radio" id="item-3" name="gallery-item">
-          <label for="item-3">Abril</label>
-          <div class="card-copy">
-            <h2>Aguardando</h2>
-            <p>
-              Em breve.
-            </p>
-            <a class="card-link is-disabled" aria-disabled="true">Ver mais</a>
-          </div>
-        </li>
-        <li style="--i: 4;">
-          <input type="radio" id="item-4" name="gallery-item">
-          <label for="item-4">Maio</label>
-          <div class="card-copy">
-            <h2>Aguardando</h2>
-            <p>
-              Em breve.
-            </p>
-            <a class="card-link is-disabled" aria-disabled="true">Ver mais</a>
-          </div>
-        </li>
-        <li style="--i: 5;">
-          <input type="radio" id="item-5" name="gallery-item">
-          <label for="item-5">Junho</label>
-          <div class="card-copy">
-            <h2>Aguardando</h2>
-            <p>
-              Em breve.
-            </p>
-            <a class="card-link is-disabled" aria-disabled="true">Ver mais</a>
-          </div>
-        </li>
-        <li style="--i: 6;">
-          <input type="radio" id="item-6" name="gallery-item">
-          <label for="item-6">Julho</label>
-          <div class="card-copy">
-            <h2>Aguardando</h2>
-            <p>
-              Em breve.
-            </p>
-            <a class="card-link is-disabled" aria-disabled="true">Ver mais</a>
-          </div>
-        </li>
-        <li style="--i: 7;">
-          <input type="radio" id="item-7" name="gallery-item">
-          <label for="item-7">Agosto</label>
-          <div class="card-copy">
-            <h2>Aguardando</h2>
-            <p>
-              Em breve.
-            </p>
-            <a class="card-link is-disabled" aria-disabled="true">Ver mais</a>
-          </div>
-        </li>
-        <li style="--i: 8;">
-          <input type="radio" id="item-8" name="gallery-item">
-          <label for="item-8">Setembro</label>
-          <div class="card-copy">
-            <h2>Aguardando</h2>
-            <p>
-              Em breve.
-            </p>
-            <a class="card-link is-disabled" aria-disabled="true">Ver mais</a>
-          </div>
-        </li>
-        <li style="--i: 9;">
-          <input type="radio" id="item-9" name="gallery-item">
-          <label for="item-9">Outubro</label>
-          <div class="card-copy">
-            <h2>Aguardando</h2>
-            <p>
-              Em breve.
-            </p>
-            <a class="card-link is-disabled" aria-disabled="true">Ver mais</a>
-          </div>
-        </li>
-        <li style="--i: 10;">
-          <input type="radio" id="item-10" name="gallery-item">
-          <label for="item-10">Novembro</label>
-          <div class="card-copy">
-            <h2>Aguardando</h2>
-            <p>
-              Em breve.
-            </p>
-            <a class="card-link is-disabled" aria-disabled="true">Ver mais</a>
-          </div>
-        </li>
-      </ul>
-    </div>
+    <header class="hero">
+     
+      
+      <div class="latex-quote">
+        \[
+        \begin{aligned}
+        &\text{“Podem me chamar de burro, eu mesmo me sinto assim quando olho para o quadro.} \\
+        &\text{Mas a minha mente está saindo da margem de erro para buscar a precisão absoluta.} \\
+        &\text{O pior da sala hoje é só o rascunho da minha melhor versão, que vou calcular amanhã.”} \\
+        &\text{(Marcelo, 2026)}
+        \end{aligned}
+        \]
+      </div>
+    </header>
+
+    <footer class="site-footer">
+      <p>© Marcelo Botura 2026</p>
+    </footer>
   </main>
-  <!-- Rodapé com crédito autoral -->
-  <footer class="site-footer">
-    <p>Todos os direitos © <a href="publications/biografia.html">Marcelo Botura Souza</a> 2016</p>
-  </footer>
-  <script src="assets/js/main.js"></script>
 </body>
 </html>
