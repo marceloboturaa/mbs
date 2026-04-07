@@ -13,8 +13,7 @@
 Site pessoal de Marcelo Botura Souza para publicar resoluções de exercícios e notas de aula com fórmulas em LaTeX.
 
 ## Status
-
-- Em desenvolvimento
+- desenvolvimento
 - Projeto pessoal
 - Acesso gratuito
 
@@ -23,8 +22,6 @@ Site pessoal de Marcelo Botura Souza para publicar resoluções de exercícios e
 O projeto organiza exercícios resolvidos de equações diferenciais em páginas HTML próprias, com visual acadêmico e leitura simples.
 
 ## Estrutura
-
-- esolucoes/calculo-3/: páginas individuais das resoluções atuais
 
 - `index.html`: página inicial do site
 - `exercicios.html`: lista de exercícios com buscador
