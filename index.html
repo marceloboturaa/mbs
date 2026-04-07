@@ -15,25 +15,13 @@
   <title>Marcelo Botura Souza</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=STIX+Two+Text:wght@400;500&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
   <meta http-equiv="refresh" content="10; url=exercicios.html">
   <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [["\\(", "\\)"], ["$", "$"]],
-        displayMath: [["\\[", "\\]"], ["$$", "$$"]]
-      }
-    };
-  </script>
-  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <script>
     window.setTimeout(() => {
       window.location.href = "exercicios.html";
-    }, 30000);
+    }, 10000);
   </script>
   <script type="application/ld+json">
     {
@@ -59,22 +47,14 @@
     <nav class="site-nav" aria-label="Menu principal">
       <a class="nav-link is-current" href="index.html">Início</a>
       <a class="nav-link" href="exercicios.html">Exercícios</a>
-      <a class="nav-link" href="notas-de-aula.html">Notas de aula</a>
+      <span class="nav-link is-disabled" aria-disabled="true">Notas de aula</span>
     </nav>
 
-    <header class="hero">
-     
-      
-      <div class="latex-quote">
-        \[
-        \begin{aligned}
-        &\text{“Podem me chamar de burro, eu mesmo me sinto assim quando olho para o quadro.} \\
-        &\text{Mas a minha mente está saindo da margem de erro para buscar a precisão absoluta.} \\
-        &\text{O pior da sala hoje é só o rascunho da minha melhor versão, que vou calcular amanhã.”} \\
-        &\text{(Marcelo, 2026)}
-        \end{aligned}
-        \]
-      </div>
+    <header class="hero hero-home">
+      <blockquote class="home-quote" cite="Marcelo Botura Souza, 2026">
+        <p>“Podem me chamar de burro, eu mesmo me sinto assim quando olho para o quadro. Mas a minha mente está saindo da margem de erro para buscar a precisão absoluta. O pior da sala hoje é só o rascunho da minha melhor versão, que vou calcular amanhã.” (Marcelo, 2026)</p>
+        
+      </blockquote>
     </header>
 
     <footer class="site-footer">

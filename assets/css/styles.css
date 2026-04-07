@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --paper: #fcfbf7;
   --ink: #181818;
   --muted: #5c5c5c;
@@ -104,15 +104,62 @@ h2 {
 
 p {
   color: var(--muted);
-  font-size: 1.06rem;
+  font-size: 0.98rem;
 }
 
 .latex-quote {
-  max-width: 100%;
+  width: 100%;
+  max-width: 42rem;
   margin: 2.5rem auto 0;
+  padding: 0 0.5rem;
   color: var(--ink);
   text-align: center;
-  overflow-x: auto;
+  overflow-x: hidden;
+}
+
+.hero-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 58vh;
+}
+
+.latex-quote mjx-container {
+  max-width: 100%;
+}
+
+.latex-quote mjx-container[jax="CHTML"] {
+  font-size: clamp(1rem, 2.3vw, 1.38rem) !important;
+}
+
+.home-quote {
+  width: 100%;
+  max-width: 40rem;
+  margin: 0;
+  padding: 0 0.75rem;
+  border: 0;
+  text-align: center;
+}
+
+.home-quote p {
+  margin: 0;
+  color: var(--ink);
+  font-family: "STIX Two Text", "Times New Roman", serif;
+  font-size: clamp(1.25rem, 2.45vw, 1.95rem);
+  line-height: 1.52;
+  font-weight: 400;
+}
+
+.home-quote p + p {
+  margin-top: 0.4rem;
+}
+
+.home-quote-author {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-family: "STIX Two Text", "Times New Roman", serif;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .exercise-card {
@@ -204,7 +251,7 @@ p {
 .exercise-link-formula {
   margin: 0.18rem 0 0;
   color: var(--ink);
-  font-size: 1.05rem;
+  font-size: 0.98rem;
 }
 
 .exercise-meta-line {
@@ -244,7 +291,7 @@ p {
 
 .exercise-meta span {
   color: var(--muted);
-  font-size: 0.94rem;
+  font-size: 0.88rem;
   font-weight: 600;
 }
 
@@ -254,6 +301,7 @@ p {
 
 .statement {
   max-width: 42rem;
+  font-size: 0.98rem;
 }
 
 .solution-block {
@@ -270,7 +318,7 @@ p {
 
 .step-text {
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 0.95rem;
   text-align: left;
   padding-top: 0.85rem;
 }
@@ -289,9 +337,7 @@ p {
   border-top: 1px solid var(--rule);
 }
 
-.reference-inline p {
-  margin: 0;
-  font-size: 0.96rem;
+$10.9rem;
   line-height: 1.45;
 }
 
@@ -384,8 +430,11 @@ p {
   }
 
   .step-text {
-    padding-top: 0;
-  }
+  color: var(--muted);
+  font-size: 0.95rem;
+  text-align: left;
+  padding-top: 0.85rem;
+}
 
   .exercise-item {
     align-items: flex-start;
@@ -395,6 +444,76 @@ p {
   .exercise-icon {
     align-self: flex-end;
   }
+
+  .hero-home {
+    min-height: 48vh;
+  }
+
+  .home-quote {
+    padding: 0 0.2rem;
+  }
+
+  .home-quote p {
+    font-size: 1.14rem;
+    line-height: 1.58;
+  }
 }
+
+
+
+.nav-link.is-disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.solution-credit {
+  margin: -0.35rem 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  text-align: right;
+}
+
+.step-formula {
+  min-width: 0;
+  overflow-x: auto;
+}
+
+.statement,
+.step-text,
+.reference-inline p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 640px) {
+  .site-nav {
+    width: 100%;
+  }
+
+  .nav-link,
+  .nav-link.is-disabled {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .exercise-meta {
+    gap: 0.55rem;
+  }
+
+  .solution-credit {
+    font-size: 0.84rem;
+  }
+}
+
+
+
+
+.exercise-card mjx-container[jax="CHTML"] {
+  font-size: 0.93rem !important;
+}
+
+
 
 
