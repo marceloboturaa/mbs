@@ -5,21 +5,30 @@ document.addEventListener("DOMContentLoaded", function () {
     return window.location.pathname.indexOf("/mbs/") === 0 ? "/mbs/" : "/";
   }
 
+  function isInternalPage(pathname) {
+    var path = String(pathname || "").toLowerCase();
+    var normalized = path.indexOf("/mbs/") === 0 ? path.slice(4) : path;
+
+    return (
+      normalized.indexOf("/resumos/") === 0 ||
+      normalized.indexOf("/exercicios/") === 0 ||
+      normalized.indexOf("/notas-de-aula/") === 0
+    );
+  }
+
   function applyEnvironmentFavicon() {
     var host = String(window.location.hostname || "").toLowerCase();
     var basePath = getBasePath();
-    var faviconHref = basePath + "icons/favicon-site.svg";
+    var faviconHref = basePath + "icons/favicon-azul.svg";
     var svgIcon = document.querySelector('link[rel="icon"][type="image/svg+xml"]');
     var anyIcon = document.querySelector('link[rel="icon"][sizes="any"]');
 
     if (host === "localhost" || host === "127.0.0.1") {
-      faviconHref = basePath + "icons/favicon-local.svg";
-    } else if (
-      host.indexOf("staging") !== -1 ||
-      host.indexOf("teste") !== -1 ||
-      host.indexOf("preview") !== -1
-    ) {
-      faviconHref = basePath + "icons/favicon-staging.svg";
+      faviconHref = isInternalPage(window.location.pathname)
+        ? basePath + "icons/favicon-verde.svg"
+        : basePath + "icons/favicon-laranja.svg";
+    } else {
+      faviconHref = basePath + "icons/favicon-azul.svg";
     }
 
     if (svgIcon) {

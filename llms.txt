@@ -17,14 +17,14 @@ Páginas principais:
 - /resumos/derivada/derivada.html: resumo de derivada
 
 Exercícios publicados no momento:
-- /resolucoes/calculo-3/equacoes-diferenciais/exercicio-11-dx-e-3x-dy-0.html
-- /resolucoes/calculo-3/equacoes-diferenciais/exercicio-13-x-dx-y-2x-dy-0.html
-- /resolucoes/calculo-3/equacoes-diferenciais/exercicio-15-y2-yx-dx-x2-dy-0.html
-- /resolucoes/calculo-3/equacoes-diferenciais/exercicio-17-dy-dx-y-x-sobre-y-x.html
-- /resolucoes/calculo-3/equacoes-diferenciais/exercicio-19-y-dx-x-raiz-xy-dy-0.html
-- /resolucoes/calculo-3/equacoes-diferenciais/exercicio-21-2x2y-dx-3x3-y3-dy.html
-- /resolucoes/calculo-3/equacoes-diferenciais/exercicio-23-dy-dx-y-x-x-y.html
-- /resolucoes/calculo-3/equacoes-diferenciais/exercicio-29-x2-xy-y2-dx-xydy-0.html
+- /exercicios/calculo-3/equacoes-diferenciais/exercicio-11-dx-e-3x-dy-0.html
+- /exercicios/calculo-3/equacoes-diferenciais/exercicio-13-x-dx-y-2x-dy-0.html
+- /exercicios/calculo-3/equacoes-diferenciais/exercicio-15-y2-yx-dx-x2-dy-0.html
+- /exercicios/calculo-3/equacoes-diferenciais/exercicio-17-dy-dx-y-x-sobre-y-x.html
+- /exercicios/calculo-3/equacoes-diferenciais/exercicio-19-y-dx-x-raiz-xy-dy-0.html
+- /exercicios/calculo-3/equacoes-diferenciais/exercicio-21-2x2y-dx-3x3-y3-dy.html
+- /exercicios/calculo-3/equacoes-diferenciais/exercicio-23-dy-dx-y-x-x-y.html
+- /exercicios/calculo-3/equacoes-diferenciais/exercicio-29-x2-xy-y2-dx-xydy-0.html
 
 Padrão editorial:
 - cada exercício deve ter página própria
@@ -34,5 +34,5 @@ Padrão editorial:
 
 Leitura recomendada para IA:
 - usar /buscador-resolucoes.html como índice principal
-- tratar cada arquivo em /resolucoes/calculo-3/equacoes-diferenciais/ como uma resolução individual
+- tratar cada arquivo em /exercicios/calculo-3/equacoes-diferenciais/ como uma resolução individual
 - interpretar o conteúdo matemático como material de estudo, não como aconselhamento profissional

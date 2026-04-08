@@ -1,20 +1,23 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Resolu&ccedil;&atilde;o do exerc&iacute;cio 25 da p&aacute;gina 59 com f&oacute;rmulas em LaTeX, publicada por Marcelo Botura Souza.">
-  <meta name="keywords" content="Marcelo Botura Souza, exerc&iacute;cio 25, p&aacute;gina 59, equa&ccedil;&otilde;es diferenciais, resolu&ccedil;&otilde;es de exerc&iacute;cios, LaTeX">
+  <meta name="description" content="Resolu&ccedil;&atilde;o do exerc&iacute;cio 13 com f&oacute;rmulas em LaTeX, publicada por Marcelo Botura Souza.">
+  <meta name="keywords" content="Marcelo Botura Souza, exerc&iacute;cio 13, equa&ccedil;&otilde;es diferenciais, resolu&ccedil;&otilde;es de exerc&iacute;cios, LaTeX">
   <meta name="author" content="Marcelo Botura Souza">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Exerc&iacute;cio 25 | Resolu&ccedil;&atilde;o">
+  <meta property="og:title" content="Exerc&iacute;cio 13 | Resolu&ccedil;&atilde;o">
   <meta property="og:description" content="Resolu&ccedil;&atilde;o comentada de equa&ccedil;&atilde;o diferencial com f&oacute;rmulas em LaTeX.">
   <meta property="og:type" content="article">
   <meta property="og:locale" content="pt_BR">
-  <title>Exerc&iacute;cio 25 | Resolu&ccedil;&atilde;o</title>
+  <title>Exerc&iacute;cio 13 | Resolu&ccedil;&atilde;o</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  >
   <link rel="stylesheet" href="../../../assets/css/styles.css">
   <script>
     window.MathJax = {
@@ -26,7 +29,7 @@
   </script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <link rel="icon" href="../../../icons/favicon.ico" sizes="any">
-  <link rel="icon" type="image/svg+xml" href="../../../icons/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="../../../icons/favicon-azul.svg">
   <link rel="icon" type="image/png" sizes="96x96" href="../../../icons/favicon-96x96.png">
   <link rel="apple-touch-icon" sizes="180x180" href="../../../icons/apple-touch-icon.png">
   <link rel="manifest" href="../../../site.webmanifest">
@@ -45,22 +48,19 @@
       <p class="eyebrow">Resolu&ccedil;&atilde;o</p>
     </header>
 
-    <div class="exercise-actions">
-      <button class="print-button" type="button" onclick="window.print()">Imprimir</button>
-    </div>
-
+    <div class="exercise-actions"><button class="print-button" type="button" onclick="window.print()">Imprimir</button></div>
     <section class="exercise-card">
       <div class="exercise-meta">
         <span>P&aacute;gina 59</span>
         <span>Cap. 2.3</span>
-        <span>Exerc&iacute;cio 25</span>
+        <span>Exerc&iacute;cio 13</span>
         <span>Equa&ccedil;&atilde;o diferencial</span>
       </div>
 
       <section class="question-block">
         <p class="statement">
           Resolver a equa&ccedil;&atilde;o diferencial
-          \(y\,\dfrac{dx}{dy} = x + 4y e^{-2x/y}\).
+          \(x\,dx + (y - 2x)\,dy = 0\).
         </p>
       </section>
 
@@ -68,69 +68,94 @@
         <div class="step-row">
           <div class="step-formula">
             \[
-            \frac{dx}{dy} = \frac{x}{y} + 4e^{-2x/y}
+            x + (y - 2x)\frac{dy}{dx} = 0
+            \]
+            \[
+            \frac{dy}{dx} = -\frac{x}{y - 2x}
             \]
           </div>
           <div class="step-text">
-            Escrevemos a equa&ccedil;&atilde;o em termos de \(x(y)\).
+            Primeiro escrevemos a equa&ccedil;&atilde;o na forma diferencial em rela&ccedil;&atilde;o a \(x\).
           </div>
         </div>
 
         <div class="step-row">
           <div class="step-formula">
             \[
-            u=\frac{x}{y}, \qquad x=uy, \qquad \frac{dx}{dy}=u+y\frac{du}{dy}
+            y = vx
+            \]
+            \[
+            \frac{dy}{dx} = v + x\frac{dv}{dx}
             \]
           </div>
           <div class="step-text">
-            Fazemos a substitui&ccedil;&atilde;o homog&ecirc;nea \(u=x/y\).
+            A equa&ccedil;&atilde;o &eacute; homog&ecirc;nea, ent&atilde;o usamos a substitui&ccedil;&atilde;o \(y = vx\).
           </div>
         </div>
 
         <div class="step-row">
           <div class="step-formula">
             \[
-            u+y\frac{du}{dy}=u+4e^{-2u}
+            v + x\frac{dv}{dx} = -\frac{1}{v - 2}
             \]
             \[
-            y\frac{du}{dy}=4e^{-2u}
+            x\frac{dv}{dx} = \frac{(v - 1)^2}{2 - v}
             \]
           </div>
           <div class="step-text">
-            A equa&ccedil;&atilde;o fica separ&aacute;vel.
+            Substitu&iacute;mos \(y\) e \(\frac{dy}{dx}\) para obter uma equa&ccedil;&atilde;o separ&aacute;vel em \(v\).
           </div>
         </div>
 
         <div class="step-row">
           <div class="step-formula">
             \[
-            e^{2u}du = 4\frac{dy}{y}
+            \frac{2 - v}{(v - 1)^2}\,dv = \frac{dx}{x}
             \]
             \[
-            \frac{1}{2}e^{2u}=4\ln|y|+C
+            \int \frac{2 - v}{(v - 1)^2}\,dv = \int \frac{dx}{x}
             \]
           </div>
           <div class="step-text">
-            Integramos os dois lados.
+            Agora separamos as vari&aacute;veis e integramos os dois lados.
           </div>
         </div>
 
         <div class="step-row">
           <div class="step-formula">
             \[
-            e^{2x/y}=8\ln|y|+C
+            -\frac{1}{v - 1} - \ln|v - 1| = \ln|x| + C
             \]
             \[
-            \boxed{e^{2x/y}-8\ln|y|=C}
+            -\frac{x}{y - x} - \ln\left|\frac{y - x}{x}\right| = \ln|x| + C
             \]
           </div>
           <div class="step-text">
-            Forma impl&iacute;cita da solu&ccedil;&atilde;o geral.
+            Depois da integra&ccedil;&atilde;o, voltamos da vari&aacute;vel \(v\) para \(y\) e \(x\).
           </div>
         </div>
 
-        <div class="solution-end" aria-label="Fim da resolu&ccedil;&atilde;o">âˆŽ</div>
-        <p class="solution-credit">resolu&ccedil;&atilde;o de Marcelo Botura</p>
+        <div class="step-row">
+          <div class="step-formula">
+            \[
+            \boxed{
+            \frac{x}{y - x} + \ln|y - x| = C
+            }
+            \]
+          </div>
+          <div class="step-text">
+            Esta &eacute; a forma impl&iacute;cita da solu&ccedil;&atilde;o geral.
+          </div>
+        </div>
+
+        <div class="solution-end" aria-label="Fim da resolu&ccedil;&atilde;o">&#8718;</div>
+      </section>
+
+      <section class="reference-inline">
+        <p>
+          ZILL, Dennis G. <em>Equa&ccedil;&otilde;es diferenciais com aplica&ccedil;&otilde;es em modelagem</em>.
+          3. ed. S&atilde;o Paulo: Cengage Learning, 2011.
+        </p>
       </section>
     </section>
 
@@ -139,6 +164,18 @@
   </main>
 <script defer src="../../../assets/js/btn-topo.js"></script></body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

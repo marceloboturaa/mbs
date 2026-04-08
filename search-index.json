@@ -31,85 +31,85 @@
     },
     {
         "title":  "Exercício 1 | Resolução",
-        "url":  "/mbs/resolucoes/calculo-3/equacoes-diferenciais/exercicio-1-dy-sen-5x.html",
+        "url":  "/mbs/exercicios/calculo-3/equacoes-diferenciais/exercicio-1-dy-sen-5x.html",
         "section":  "Resoluções",
         "content":  "Exercício 1 | Resolução Início Exercícios Notas de aula Resumos Resolução Imprimir Página 51 Cap. 2.2 Exercício 1 Equação diferencial Resolver a equação diferencial \\(\\dfrac{dy}{dx}=\\sin 5x\\). \\[ \\frac{dy}{dx}=\\sin 5x \\;\\Longrightarrow\\; dy=\\sin 5x\\,dx \\] Colocamos a equação na forma diferencial para integrar os dois lados. \\[\\int dy=\\int \\sin 5x\\,dx\\] Integramos ambos os lados da equação. \\[u=5x,\\qquad du=5\\,dx\\] Para enxergar melhor a regra da cadeia, fazemos a substituição \\(u=5x\\). \\[\\int \\sin 5x\\,dx=\\int \\sin u\\cdot \\frac{du}{5}\\] A integral fica \\(\\frac{1}{5}\\int \\sin u\\,du\\), mostrando o fator que surge da mudança de variável. \\[\\frac{1}{5}\\int \\sin u\\,du=-\\frac{1}{5}\\cos u + C\\] Integramos \\(\\sin u\\) e voltamos para a variável original. \\[y=-\\frac{1}{5}\\cos 5x + C\\]\\[\\boxed{y=-\\frac{1}{5}\\cos 5x + C}\\] Acrescentamos a constante de integração e obtemos a solução geral. âˆŽ resolução de Marcelo Botura @sabormatematica | 2026"
     },
     {
         "title":  "Exercício 11 | Resolução",
-        "url":  "/mbs/resolucoes/calculo-3/equacoes-diferenciais/exercicio-11-dx-e-3x-dy-0.html",
+        "url":  "/mbs/exercicios/calculo-3/equacoes-diferenciais/exercicio-11-dx-e-3x-dy-0.html",
         "section":  "Resoluções",
         "content":  "Exercício 11 | Resolução Início Exercícios Notas de aula Resumos Resolução Imprimir Página 59 Cap. 2.3 Exercício 11 Equação diferencial Resolver a equação diferencial \\(dx + e^{3x}\\,dy = 0\\). \\[ e^{3x}dy = -dx \\] \\[ dy = -e^{-3x}dx \\] Reorganizamos a equação para deixar \\(dy\\) isolado. \\[ \\int dy = \\int -e^{-3x}dx \\] \\[ y = -\\int e^{-3x}dx \\] Agora integramos os dois lados da igualdade. \\[ \\int e^{-3x}dx = -\\frac{1}{3}e^{-3x} \\] Usamos a integral direta da exponencial. \\[ y = -\\left(-\\frac{1}{3}e^{-3x}\\right) + C \\] \\[ \\boxed{ y = \\frac{1}{3}e^{-3x} + C } \\] Substituindo o resultado da integral, obtemos a solução geral. âˆŽ resolução de Marcelo Botura ZILL, Dennis G. Equações diferenciais com aplicações em modelagem . 3. ed. São Paulo: Cengage Learning, 2011. @sabormatematica | 2026"
     },
     {
         "title":  "Exercício 13 | Resolução",
-        "url":  "/mbs/resolucoes/calculo-3/equacoes-diferenciais/exercicio-13-x-dx-y-2x-dy-0.html",
+        "url":  "/mbs/exercicios/calculo-3/equacoes-diferenciais/exercicio-13-x-dx-y-2x-dy-0.html",
         "section":  "Resoluções",
         "content":  "Exercício 13 | Resolução Início Exercícios Notas de aula Resumos Resolução Imprimir Página 59 Cap. 2.3 Exercício 13 Equação diferencial Resolver a equação diferencial \\(x\\,dx + (y - 2x)\\,dy = 0\\). \\[ x + (y - 2x)\\frac{dy}{dx} = 0 \\] \\[ \\frac{dy}{dx} = -\\frac{x}{y - 2x} \\] Primeiro escrevemos a equação na forma diferencial em relação a \\(x\\). \\[ y = vx \\] \\[ \\frac{dy}{dx} = v + x\\frac{dv}{dx} \\] A equação é homogênea, então usamos a substituição \\(y = vx\\). \\[ v + x\\frac{dv}{dx} = -\\frac{1}{v - 2} \\] \\[ x\\frac{dv}{dx} = \\frac{(v - 1)^2}{2 - v} \\] Substituímos \\(y\\) e \\(\\frac{dy}{dx}\\) para obter uma equação separável em \\(v\\). \\[ \\frac{2 - v}{(v - 1)^2}\\,dv = \\frac{dx}{x} \\] \\[ \\int \\frac{2 - v}{(v - 1)^2}\\,dv = \\int \\frac{dx}{x} \\] Agora separamos as variáveis e integramos os dois lados. \\[ -\\frac{1}{v - 1} - \\ln|v - 1| = \\ln|x| + C \\] \\[ -\\frac{x}{y - x} - \\ln\\left|\\frac{y - x}{x}\\right| = \\ln|x| + C \\] Depois da integração, voltamos da variável \\(v\\) para \\(y\\) e \\(x\\). \\[ \\boxed{ \\frac{x}{y - x} + \\ln|y - x| = C } \\] Esta é a forma implícita da solução geral. âˆŽ ZILL, Dennis G. Equações diferenciais com aplicações em modelagem . 3. ed. São Paulo: Cengage Learning, 2011. @sabormatematica | 2026"
     },
     {
         "title":  "Exercício 14 | Resolução",
-        "url":  "/mbs/resolucoes/calculo-3/equacoes-diferenciais/exercicio-14-y-dx-2x-y-dy.html",
+        "url":  "/mbs/exercicios/calculo-3/equacoes-diferenciais/exercicio-14-y-dx-2x-y-dy.html",
         "section":  "Resoluções",
         "content":  "Exercício 14 | Resolução Início Exercícios Notas de aula Resumos Resolução Imprimir Página 59 Cap. 2.3 Exercício 14 Equação diferencial Resolver a equação diferencial \\(y\\,dx = 2(x+y)\\,dy\\). \\[ \\frac{dx}{dy} = \\frac{2(x+y)}{y} \\] \\[ \\frac{dx}{dy} - \\frac{2}{y}x = 2 \\] Colocamos a equação na forma linear em \\(x(y)\\). \\[ \\mu(y)=e^{\\int -2/y\\,dy}=y^{-2} \\] \\[ \\frac{d}{dy}\\!\\left(xy^{-2}\\right)=2y^{-2} \\] Usamos o fator integrante \\(\\mu(y)=y^{-2}\\). \\[ \\int \\frac{d}{dy}\\!\\left(xy^{-2}\\right)dy=\\int 2y^{-2}dy \\] \\[ xy^{-2}=-2y^{-1}+C \\] Integramos ambos os lados. \\[ x=-2y+Cy^2 \\] \\[ \\boxed{x+2y=Cy^2} \\] Forma implícita da solução geral. âˆŽ resolução de Marcelo Botura @sabormatematica | 2026"
     },
     {
         "title":  "Exercicio 15 | Resolucao",
-        "url":  "/mbs/resolucoes/calculo-3/equacoes-diferenciais/exercicio-15-y2-yx-dx-x2-dy-0.html",
+        "url":  "/mbs/exercicios/calculo-3/equacoes-diferenciais/exercicio-15-y2-yx-dx-x2-dy-0.html",
         "section":  "Resoluções",
         "content":  "Exercicio 15 | Resolucao Início Exercícios Notas de aula Resumos Resolução Imprimir Página 59 Cap. 2.3 Exercício 15 Equação diferencial Resolver \\((y^2 + yx)\\,dx - x^2\\,dy = 0\\). \\[\\frac{dy}{dx}=\\frac{y^2+xy}{x^2}=\\left(\\frac{y}{x}\\right)^2+\\frac{y}{x}\\] A equação é homogênea. \\[y=vx,\\qquad \\frac{dy}{dx}=v+x\\frac{dv}{dx}\\] Usamos a substituição \\(y=vx\\). \\[v+x\\frac{dv}{dx}=v^2+v\\]\\[x\\frac{dv}{dx}=v^2\\] Substituímos e separamos as variáveis. \\[\\frac{dv}{v^2}=\\frac{dx}{x}\\]\\[-\\frac{1}{v}=\\ln|x|+C\\] Integramos os dois lados. \\[\\boxed{\\frac{x}{y}+\\ln|x|=C}\\] Forma implícita da solução geral. âˆŽ resolução de Marcelo Botura ZILL, Dennis G. Equações diferenciais com aplicações em modelagem . 3. ed. São Paulo: Cengage Learning, 2011. @sabormatematica | 2026"
     },
     {
         "title":  "Exercicio 17 | Resolucao",
-        "url":  "/mbs/resolucoes/calculo-3/equacoes-diferenciais/exercicio-17-dy-dx-y-x-sobre-y-x.html",
+        "url":  "/mbs/exercicios/calculo-3/equacoes-diferenciais/exercicio-17-dy-dx-y-x-sobre-y-x.html",
         "section":  "Resoluções",
         "content":  "Exercicio 17 | Resolucao Início Exercícios Notas de aula Resumos Resolução Imprimir Página 59 Cap. 2.3 Exercício 17 Equação diferencial Resolver \\(\\dfrac{dy}{dx}=\\dfrac{y-x}{y+x}\\). \\[y=vx,\\qquad \\frac{dy}{dx}=v+x\\frac{dv}{dx}\\] A equação é homogênea. \\[v+x\\frac{dv}{dx}=\\frac{v-1}{v+1}\\]\\[x\\frac{dv}{dx}=-\\frac{v^2+1}{v+1}\\] Substituímos \\(y=vx\\). \\[\\frac{v+1}{v^2+1}\\,dv=-\\frac{dx}{x}\\] Separamos as variáveis. \\[\\frac{1}{2}\\ln(v^2+1)+\\arctan(v)=-\\ln|x|+C\\] Integramos termo a termo. \\[\\boxed{\\frac{1}{2}\\ln(x^2+y^2)+\\arctan\\left(\\frac{y}{x}\\right)=C}\\] Forma implícita da solução geral. âˆŽ resolução de Marcelo Botura ZILL, Dennis G. Equações diferenciais com aplicações em modelagem . 3. ed. São Paulo: Cengage Learning, 2011. @sabormatematica | 2026"
     },
     {
         "title":  "Exercicio 19 | Resolucao",
-        "url":  "/mbs/resolucoes/calculo-3/equacoes-diferenciais/exercicio-19-y-dx-x-raiz-xy-dy-0.html",
+        "url":  "/mbs/exercicios/calculo-3/equacoes-diferenciais/exercicio-19-y-dx-x-raiz-xy-dy-0.html",
         "section":  "Resoluções",
         "content":  "Exercicio 19 | Resolucao Início Exercícios Notas de aula Resumos Resolução Imprimir Página 59 Cap. 2.3 Exercício 19 Equação diferencial Resolver \\(-y\\,dx+(x+\\sqrt{xy})\\,dy=0\\). \\[\\frac{dy}{dx}=\\frac{y}{x+\\sqrt{xy}}\\] A equação é homogênea. \\[y=vx,\\qquad \\frac{dy}{dx}=v+x\\frac{dv}{dx}\\] Usamos \\(y=vx\\). \\[v+x\\frac{dv}{dx}=\\frac{v}{1+\\sqrt{v}}\\]\\[x\\frac{dv}{dx}=-\\frac{v^{3/2}}{1+\\sqrt{v}}\\] Substituímos e separamos as variáveis. \\[\\frac{1+\\sqrt{v}}{v^{3/2}}\\,dv=-\\frac{dx}{x}\\] Separamos as variáveis. \\[u=\\sqrt{v},\\qquad dv=2u\\,du\\]\\[-\\frac{2}{u}+2\\ln|u|=-\\ln|x|+C\\] Fazemos \\(u=\\sqrt{v}\\) para integrar. \\[\\boxed{\\ln|y|-2\\sqrt{\\frac{x}{y}}=C}\\] Forma implícita da solução geral. âˆŽ resolução de Marcelo Botura ZILL, Dennis G. Equações diferenciais com aplicações em modelagem . 3. ed. São Paulo: Cengage Learning, 2011. @sabormatematica | 2026"
     },
     {
         "title":  "Exercício 2 | Resolução",
-        "url":  "/mbs/resolucoes/calculo-3/equacoes-diferenciais/exercicio-2-dy-x-1-ao-quadrado.html",
+        "url":  "/mbs/exercicios/calculo-3/equacoes-diferenciais/exercicio-2-dy-x-1-ao-quadrado.html",
         "section":  "Resoluções",
         "content":  "Exercício 2 | Resolução Início Exercícios Notas de aula Resumos Resolução Imprimir Página 51 Cap. 2.2 Exercício 2 Equação diferencial Resolver a equação diferencial \\(\\dfrac{dy}{dx}=(x+1)^2\\). \\[\\int dy=\\int (x+1)^2\\,dx\\]\\[y=\\frac{(x+1)^3}{3}+C\\] Integração direta. \\[\\boxed{y=\\frac{(x+1)^3}{3}+C}\\] Solução geral. âˆŽ resolução de Marcelo Botura @sabormatematica | 2026"
     },
     {
         "title":  "Exercicio 21 | Resolucao",
-        "url":  "/mbs/resolucoes/calculo-3/equacoes-diferenciais/exercicio-21-2x2y-dx-3x3-y3-dy.html",
+        "url":  "/mbs/exercicios/calculo-3/equacoes-diferenciais/exercicio-21-2x2y-dx-3x3-y3-dy.html",
         "section":  "Resoluções",
         "content":  "Exercicio 21 | Resolucao Início Exercícios Notas de aula Resumos Resolução Imprimir Página 59 Cap. 2.3 Exercício 21 Equação diferencial Resolver \\(2x^2y\\,dx=(3x^3+y^3)\\,dy\\). \\[\\frac{dy}{dx}=\\frac{2x^2y}{3x^3+y^3}\\] A equação é homogênea. \\[y=vx,\\qquad \\frac{dy}{dx}=v+x\\frac{dv}{dx}\\] Usamos \\(y=vx\\). \\[v+x\\frac{dv}{dx}=\\frac{2v}{3+v^3}\\]\\[x\\frac{dv}{dx}=-\\frac{v(v^3+1)}{v^3+3}\\] Substituímos e separamos as variáveis. \\[\\frac{v^3+3}{v(v^3+1)}\\,dv=-\\frac{dx}{x}\\]\\[\\left(\\frac{3}{v}-\\frac{2v^2}{v^3+1}\\right)dv=-\\frac{dx}{x}\\] Usamos frações parciais. \\[3\\ln|v|-\\frac{2}{3}\\ln|v^3+1|=-\\ln|x|+C\\] Integramos os dois lados. \\[\\boxed{3\\ln|y|-\\frac{2}{3}\\ln|x^3+y^3|=C}\\] Forma implícita da solução geral. âˆŽ resolução de Marcelo Botura ZILL, Dennis G. Equações diferenciais com aplicações em modelagem . 3. ed. São Paulo: Cengage Learning, 2011. @sabormatematica | 2026"
     },
     {
         "title":  "Exercicio 23 | Resolucao",
-        "url":  "/mbs/resolucoes/calculo-3/equacoes-diferenciais/exercicio-23-dy-dx-y-x-x-y.html",
+        "url":  "/mbs/exercicios/calculo-3/equacoes-diferenciais/exercicio-23-dy-dx-y-x-x-y.html",
         "section":  "Resoluções",
         "content":  "Exercicio 23 | Resolucao Início Exercícios Notas de aula Resumos Resolução Imprimir Página 59 Cap. 2.3 Exercício 23 Equação diferencial Resolver \\(\\dfrac{dy}{dx}=\\dfrac{y}{x}+\\dfrac{x}{y}\\). \\[y=vx,\\qquad \\frac{dy}{dx}=v+x\\frac{dv}{dx}\\] A equação é homogênea. \\[v+x\\frac{dv}{dx}=v+\\frac{1}{v}\\]\\[x\\frac{dv}{dx}=\\frac{1}{v}\\] Substituímos e separamos as variáveis. \\[v\\,dv=\\frac{dx}{x}\\]\\[\\frac{1}{2}v^2=\\ln|x|+C\\] Integramos os dois lados. \\[\\boxed{y^2=x^2\\left(2\\ln|x|+C\\right)}\\] Forma da solução geral. âˆŽ resolução de Marcelo Botura ZILL, Dennis G. Equações diferenciais com aplicações em modelagem . 3. ed. São Paulo: Cengage Learning, 2011. @sabormatematica | 2026"
     },
     {
         "title":  "Exercício 25 | Resolução",
-        "url":  "/mbs/resolucoes/calculo-3/equacoes-diferenciais/exercicio-25-y-dx-dy-x-4y-e-2x-sobre-y.html",
+        "url":  "/mbs/exercicios/calculo-3/equacoes-diferenciais/exercicio-25-y-dx-dy-x-4y-e-2x-sobre-y.html",
         "section":  "Resoluções",
         "content":  "Exercício 25 | Resolução Início Exercícios Notas de aula Resumos Resolução Imprimir Página 59 Cap. 2.3 Exercício 25 Equação diferencial Resolver a equação diferencial \\(y\\,\\dfrac{dx}{dy} = x + 4y e^{-2x/y}\\). \\[ \\frac{dx}{dy} = \\frac{x}{y} + 4e^{-2x/y} \\] Escrevemos a equação em termos de \\(x(y)\\). \\[ u=\\frac{x}{y}, \\qquad x=uy, \\qquad \\frac{dx}{dy}=u+y\\frac{du}{dy} \\] Fazemos a substituição homogênea \\(u=x/y\\). \\[ u+y\\frac{du}{dy}=u+4e^{-2u} \\] \\[ y\\frac{du}{dy}=4e^{-2u} \\] A equação fica separável. \\[ e^{2u}du = 4\\frac{dy}{y} \\] \\[ \\frac{1}{2}e^{2u}=4\\ln|y|+C \\] Integramos os dois lados. \\[ e^{2x/y}=8\\ln|y|+C \\] \\[ \\boxed{e^{2x/y}-8\\ln|y|=C} \\] Forma implícita da solução geral. âˆŽ resolução de Marcelo Botura @sabormatematica | 2026"
     },
     {
         "title":  "Exercício 27 | Resolução",
-        "url":  "/mbs/resolucoes/calculo-3/equacoes-diferenciais/exercicio-27-y-cotg-y-sobre-x-dx-x-dy.html",
+        "url":  "/mbs/exercicios/calculo-3/equacoes-diferenciais/exercicio-27-y-cotg-y-sobre-x-dx-x-dy.html",
         "section":  "Resoluções",
         "content":  "Exercício 27 | Resolução Início Exercícios Notas de aula Resumos Resolução Imprimir Página 59 Cap. 2.3 Exercício 27 Equação diferencial Resolver a equação diferencial \\((y+\\cot(y/x))\\,dx - x\\,dy = 0\\). \\[ x\\frac{dy}{dx}=y+\\cot\\!\\left(\\frac{y}{x}\\right) \\] \\[ \\frac{dy}{dx}=\\frac{y}{x}+\\frac{1}{x}\\cot\\!\\left(\\frac{y}{x}\\right) \\] A equação depende de \\(y/x\\), então usamos a substituição homogênea. \\[ v=\\frac{y}{x}, \\qquad y=vx, \\qquad \\frac{dy}{dx}=v+x\\frac{dv}{dx} \\] Tomamos \\(v=y/x\\). \\[ v+x\\frac{dv}{dx}=v+\\frac{1}{x}\\cot(v) \\] \\[ x^2\\frac{dv}{dx}=\\cot(v) \\] Substituímos e isolamos a derivada de \\(v\\). \\[ \\tan(v)\\,dv=\\frac{dx}{x^2} \\] \\[ -\\ln|\\cos(v)|=-\\frac{1}{x}+C \\] Integramos os dois lados. \\[ \\ln\\left|\\cos\\!\\left(\\frac{y}{x}\\right)\\right|=\\frac{1}{x}+C \\] \\[ \\boxed{\\cos\\!\\left(\\frac{y}{x}\\right)=Ce^{1/x}} \\] Forma implícita da solução geral. âˆŽ resolução de Marcelo Botura @sabormatematica | 2026"
     },
     {
         "title":  "Exercicio 29 | Resolucao",
-        "url":  "/mbs/resolucoes/calculo-3/equacoes-diferenciais/exercicio-29-x2-xy-y2-dx-xydy-0.html",
+        "url":  "/mbs/exercicios/calculo-3/equacoes-diferenciais/exercicio-29-x2-xy-y2-dx-xydy-0.html",
         "section":  "Resoluções",
         "content":  "Exercicio 29 | Resolucao Início Exercícios Notas de aula Resumos Resolução Imprimir Página 59 Cap. 2.3 Exercício 29 Equação diferencial Resolver \\((x^2+xy-y^2)\\,dx-xy\\,dy=0\\). \\[\\frac{dy}{dx}=\\frac{x^2+xy-y^2}{xy}=\\frac{x}{y}+1-\\frac{y}{x}\\] A equação é homogênea. \\[y=vx,\\qquad \\frac{dy}{dx}=v+x\\frac{dv}{dx}\\] Usamos \\(y=vx\\). \\[v+x\\frac{dv}{dx}=\\frac{1}{v}+1-v\\]\\[x\\frac{dv}{dx}=\\frac{1+v-2v^2}{v}\\] Substituímos e separamos. \\[\\frac{v}{(1-v)(2v+1)}\\,dv=\\frac{dx}{x}\\]\\[\\frac{1}{3}\\frac{dv}{1-v}-\\frac{1}{3}\\frac{dv}{2v+1}=\\frac{dx}{x}\\] Usamos frações parciais. \\[-\\frac{1}{3}\\ln|1-v|-\\frac{1}{6}\\ln|2v+1|=\\ln|x|+C\\] Integramos os dois lados. \\[\\boxed{x^3(x-y)^2(x+2y)=C}\\] Forma implícita da solução geral. âˆŽ resolução de Marcelo Botura ZILL, Dennis G. Equações diferenciais com aplicações em modelagem . 3. ed. São Paulo: Cengage Learning, 2011. @sabormatematica | 2026"
     },
     {
         "title":  "Exercício 3 | Resolução",
-        "url":  "/mbs/resolucoes/calculo-3/equacoes-diferenciais/exercicio-3-dx-e-3x-dy-0-cap22.html",
+        "url":  "/mbs/exercicios/calculo-3/equacoes-diferenciais/exercicio-3-dx-e-3x-dy-0-cap22.html",
         "section":  "Resoluções",
         "content":  "Exercício 3 | Resolução Início Exercícios Notas de aula Resumos Resolução Imprimir Página 51 Cap. 2.2 Exercício 3 Equação diferencial Resolver a equação diferencial \\(dx + e^{3x}dy = 0\\). \\[e^{3x}dy=-dx\\]\\[dy=-e^{-3x}dx\\] Isolamos \\(dy\\) e integramos. \\[y=\\int -e^{-3x}dx\\]\\[\\boxed{y=\\frac{1}{3}e^{-3x}+C}\\] Solução geral. âˆŽ resolução de Marcelo Botura @sabormatematica | 2026"
     },

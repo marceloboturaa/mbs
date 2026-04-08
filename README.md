@@ -54,4 +54,4 @@ O projeto organiza exercícios resolvidos de equações diferenciais em páginas
 
 ## Observação
 
-Cada exercício possui uma página própria. A listagem principal fica em `buscador-resolucoes.html`, e as resoluções atuais estão organizadas em `resolucoes/calculo-3/equacoes-diferenciais/`.
+Cada exercício possui uma página própria. A listagem principal fica em `buscador-resolucoes.html`, e as resoluções atuais estão organizadas em `exercicios/calculo-3/equacoes-diferenciais/`.
