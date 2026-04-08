@@ -533,10 +533,175 @@ h2 {
   line-height: 1.45;
 }
 
+body.note-page {
+  background:
+    radial-gradient(circle at top left, rgba(149, 171, 146, 0.1), transparent 36%),
+    linear-gradient(180deg, #fbfaf6 0%, #f6f5ef 100%);
+}
+
+body.note-page .page {
+  width: min(980px, calc(100% - 2rem));
+}
+
+.note-page .paper {
+  width: min(920px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 0 0 1.5rem;
+}
+
+.note-page .paper > h1 {
+  margin-top: 0;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+.note-page .paper h2 {
+  margin-top: 2rem;
+}
+
+.note-page .paper h3 {
+  margin: 1.35rem 0 0.65rem;
+  font-family: "Fraunces", serif;
+  color: var(--ink);
+  font-size: 1.15rem;
+  line-height: 1.25;
+}
+
+.note-page .paper h4 {
+  margin: 1rem 0 0.55rem;
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.note-page .subhead {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin: 0.75rem 0 1.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.note-page .subhead span + span {
+  padding-left: 1rem;
+  border-left: 1px solid var(--rule);
+}
+
+.note-page .lista {
+  margin: 0.3rem 0 1rem;
+  padding-left: 1.2rem;
+}
+
+.note-page .lista li + li {
+  margin-top: 0.2rem;
+}
+
+.note-page .exemplo-bloco,
+.note-page .obs,
+.note-page .grafico-container {
+  margin: 1rem 0 1.25rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--rule);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 8px 24px rgba(24, 24, 24, 0.04);
+}
+
+.note-page .exemplo-bloco strong,
+.note-page .obs strong {
+  color: var(--ink);
+}
+
+.note-page .equation {
+  margin: 0.8rem 0;
+  overflow-x: auto;
+}
+
+.note-page .equation mjx-container {
+  max-width: 100%;
+}
+
+.note-page .grafico-container h4 {
+  margin-top: 0;
+}
+
+.note-page .grafico-container canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 0.75rem;
+  border: 1px solid var(--rule) !important;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.note-page .grafico-legenda {
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.note-page .assintota-texto {
+  color: var(--ink);
+}
+
+.note-page hr {
+  margin: 1.5rem 0 1.1rem;
+  border: 0;
+  border-top: 1px solid var(--rule);
+}
+
+.note-page footer {
+  margin-top: 1.5rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+}
+
+.note-page footer p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.note-page .exercise-actions {
+  margin-top: 0;
+}
+
+.note-page .print-button {
+  font-size: 0.88rem;
+}
+
+.note-path {
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.82rem;
+  letter-spacing: 0.01em;
+  word-break: break-all;
+}
+
 .exercise-actions {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.55rem;
   margin: 0 0 1rem;
+}
+
+.action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  width: fit-content;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.9rem;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .print-button {
@@ -550,12 +715,56 @@ h2 {
   cursor: pointer;
 }
 
+.print-button,
+.action-button.print-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.print-button::before,
+.action-button.print-action::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+  background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9V2h12v7'/%3E%3Cpath d='M6 18H5a3 3 0 0 1-3-3v-2a3 3 0 0 1 3-3h14a3 3 0 0 1 3 3v2a3 3 0 0 1-3 3h-1'/%3E%3Cpath d='M6 14h12v8H6z'/%3E%3Cpath d='M9 18h6'/%3E%3C/svg%3E") no-repeat center / contain;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9V2h12v7'/%3E%3Cpath d='M6 18H5a3 3 0 0 1-3-3v-2a3 3 0 0 1 3-3h14a3 3 0 0 1 3 3v2a3 3 0 0 1-3 3h-1'/%3E%3Cpath d='M6 14h12v8H6z'/%3E%3Cpath d='M9 18h6'/%3E%3C/svg%3E") no-repeat center / contain;
+}
+
+.button-icon-latex {
+  min-width: 2.15rem;
+  height: 1.35rem;
+  padding: 0 0.45rem;
+  border-radius: 999px;
+  background: #181818;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  font-family: "Source Sans 3", system-ui, sans-serif;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-button:hover,
+.action-button:focus-visible {
+  background: #f4f1ea;
+}
+
 .print-button:hover,
 .print-button:focus-visible {
   background: #f4f1ea;
 }
 
 @media (max-width: 640px) {
+  body.note-page .page {
+    width: calc(100% - 0.9rem);
+  }
+
   .page {
     width: calc(100% - 0.9rem);
     min-height: 100dvh;
@@ -684,6 +893,10 @@ h2 {
     padding: 0;
     min-height: auto;
     display: block;
+  }
+
+  body.note-page .page {
+    width: 100%;
   }
 
   .site-nav,

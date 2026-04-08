@@ -8,7 +8,12 @@ document.addEventListener("DOMContentLoaded", function () {
     "Podem me rotular como o menor dos catetos hoje, mas este ano eu me torno a hipotenusa. Vou ser maior que a soma de qualquer dúvida que lançarem sobre mim.",
     "Minha inteligência hoje pode parecer uma função constante, mas minha vontade de aprender é uma exponencial. O mundo que se prepare para o meu ponto de inflexão.",
     "Sim, eu me sinto o mais burro quando olho pro quadro. Mas minha mente está saindo do erro para a precisão absoluta. O pior da sala hoje é só o rascunho de alguém que aprendeu a vencer amanhã.",
-    "Podem me chamar de burro, eu mesmo me sinto assim quando olho pro quadro. Mas a minha mente está saindo do limite de erro para buscar a precisão absoluta. O pior da sala hoje é só o rascunho da minha melhor versão que vou calcular amanhã."
+    "Podem me chamar de burro, eu mesmo me sinto assim quando olho pro quadro. Mas a minha mente está saindo do limite de erro para buscar a precisão absoluta. O pior da sala hoje é só o rascunho da minha melhor versão que vou calcular amanhã.",
+    "Hoje eu sou o atraso da turma, o mais enrolado com os números. Mas a vida não é uma constante, é uma progressão. Posso começar no negativo, mas minha soma diária vai me levar onde ninguém acredita que eu chego.",
+    "Eu aceito: hoje sou o mais burro da sala, aquele que se perde em qualquer conta básica. Mas o erro é apenas uma variável de ajuste. Vou errar até aprender, e aprender até o meu resultado ser incontestável.",
+    "Olho pro quadro e só vejo caos, me sinto o zero à esquerda da classe. Mas até a equação mais complexa começa com alguém que não entende nada. Estou saindo do ponto de inércia para virar a maior surpresa desse ano.",
+    "Posso ser o mais enrolado e lento hoje, aquele que todo mundo subestima. Mas estou fazendo o cálculo da minha virada. O tempo que eu perco tentando entender agora é o investimento pra eu nunca mais esquecer depois.",
+    "O rótulo de 'pior da sala' eu já tenho. Agora só me resta o trabalho duro para provar que a minha inteligência é uma função crescente, e o meu limite é o topo."
   ];
   var warningMessage = "Se não estudar, o bicho da DP aparece sem avisar.";
 
