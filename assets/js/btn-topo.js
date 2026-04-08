@@ -1,6 +1,52 @@
 document.addEventListener("DOMContentLoaded", function () {
   var button = document.querySelector(".btn-topo");
 
+  function getBasePath() {
+    return window.location.pathname.indexOf("/mbs/") === 0 ? "/mbs/" : "/";
+  }
+
+  function applyEnvironmentFavicon() {
+    var host = String(window.location.hostname || "").toLowerCase();
+    var basePath = getBasePath();
+    var faviconHref = basePath + "icons/favicon-site.svg";
+    var svgIcon = document.querySelector('link[rel="icon"][type="image/svg+xml"]');
+    var anyIcon = document.querySelector('link[rel="icon"][sizes="any"]');
+
+    if (host === "localhost" || host === "127.0.0.1") {
+      faviconHref = basePath + "icons/favicon-local.svg";
+    } else if (
+      host.indexOf("staging") !== -1 ||
+      host.indexOf("teste") !== -1 ||
+      host.indexOf("preview") !== -1
+    ) {
+      faviconHref = basePath + "icons/favicon-staging.svg";
+    }
+
+    if (svgIcon) {
+      svgIcon.href = faviconHref;
+    }
+
+    if (anyIcon) {
+      anyIcon.href = faviconHref;
+      anyIcon.type = "image/svg+xml";
+      anyIcon.removeAttribute("sizes");
+    }
+  }
+
+  function applyEnvironmentClasses() {
+    var host = String(window.location.hostname || "").toLowerCase();
+
+    if (!document.body) {
+      return;
+    }
+
+    if (host === "localhost" || host === "127.0.0.1") {
+      document.body.classList.add("is-localhost");
+    } else {
+      document.body.classList.remove("is-localhost");
+    }
+  }
+
   function getCurrentSection(pathname) {
     var path = String(pathname || "").toLowerCase();
 
@@ -25,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function enhanceSiteNav() {
     var nav = document.querySelector(".site-nav");
-    var basePath = window.location.pathname.indexOf("/mbs/") === 0 ? "/mbs/" : "/";
+    var basePath = getBasePath();
     var currentSection;
     var links;
     var markup;
@@ -73,6 +119,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   ensureTopAnchor();
+  applyEnvironmentClasses();
+  applyEnvironmentFavicon();
   enhanceSiteNav();
 
   if (!button) {

@@ -21,6 +21,18 @@ body {
   background: var(--paper);
 }
 
+body:not(.home-page) {
+  background:
+    radial-gradient(circle at top left, rgba(126, 154, 197, 0.16), transparent 34%),
+    linear-gradient(180deg, #f5f8fc 0%, #edf3fa 100%);
+}
+
+body.is-localhost:not(.home-page) {
+  background:
+    radial-gradient(circle at top left, rgba(149, 171, 146, 0.16), transparent 34%),
+    linear-gradient(180deg, #f8fbf6 0%, #eef4ec 100%);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -33,8 +45,14 @@ body.home-page {
 
 body.search-page {
   background:
-    radial-gradient(circle at top left, rgba(120, 128, 138, 0.12), transparent 34%),
-    linear-gradient(180deg, #f4f4f2 0%, #ebedee 100%);
+    radial-gradient(circle at top left, rgba(118, 146, 190, 0.18), transparent 34%),
+    linear-gradient(180deg, #f3f7fc 0%, #e8eef7 100%);
+}
+
+body.search-page.is-localhost {
+  background:
+    radial-gradient(circle at top left, rgba(149, 171, 146, 0.18), transparent 34%),
+    linear-gradient(180deg, #f6faf4 0%, #e8efe4 100%);
 }
 
 a {
@@ -56,6 +74,17 @@ p {
   display: flex;
   flex-direction: column;
   padding: 1rem 0 0;
+}
+
+img,
+canvas,
+iframe,
+video {
+  max-width: 100%;
+}
+
+.page svg {
+  max-width: 100%;
 }
 
 .site-canvas {
@@ -674,12 +703,12 @@ h2 {
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
-  transition: opacity 180ms ease, transform 180ms ease, visibility 180ms ease, background 180ms ease;
+  transition: opacity 180ms ease, transform 180ms ease, visibility 180ms ease, background 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
   pointer-events: none;
 }
 
 .btn-topo.is-visible {
-  opacity: 1;
+  opacity: 0.2;
   visibility: visible;
   transform: translateY(0);
   pointer-events: auto;
@@ -687,13 +716,33 @@ h2 {
 
 .btn-topo:hover,
 .btn-topo:focus-visible {
-  background: #2a2a2a;
+  opacity: 0.95;
+  background: rgba(24, 24, 24, 0.88);
+  border-color: rgba(24, 24, 24, 0.92);
+  box-shadow: 0 18px 36px rgba(24, 24, 24, 0.2);
+}
+
+@media (hover: none), (pointer: coarse) {
+  .btn-topo.is-visible {
+    opacity: 0.78;
+  }
+
+  .btn-topo:hover,
+  .btn-topo:focus-visible {
+    opacity: 0.9;
+  }
 }
 
 body.note-page {
   background:
-    radial-gradient(circle at top left, rgba(149, 171, 146, 0.1), transparent 36%),
-    linear-gradient(180deg, #fbfaf6 0%, #f6f5ef 100%);
+    radial-gradient(circle at top left, rgba(124, 152, 196, 0.16), transparent 36%),
+    linear-gradient(180deg, #f7f9fd 0%, #eef3fa 100%);
+}
+
+body.note-page.is-localhost {
+  background:
+    radial-gradient(circle at top left, rgba(149, 171, 146, 0.16), transparent 36%),
+    linear-gradient(180deg, #f9fbf6 0%, #eef3eb 100%);
 }
 
 body.note-page .page {
@@ -977,6 +1026,20 @@ body.note-page .page {
     width: 100%;
   }
 
+  .exercise-search,
+  .search-panel {
+    width: 100%;
+  }
+
+  .exercise-search-icon {
+    flex: 0 0 auto;
+  }
+
+  .exercise-search input,
+  .search-panel input {
+    min-width: 0;
+  }
+
   .step-row {
     grid-template-columns: 1fr;
     gap: 0.35rem;
@@ -1143,19 +1206,4 @@ body.note-page .page {
     color: inherit;
     text-decoration: none;
   }
-}
-.btn-topo {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px 15px;
-  background-color: #333;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  display: block;
-  /* Ou none, se for usar JS para mostrar/esconder */
-}
-html {
-  scroll-behavior: smooth;
 }
