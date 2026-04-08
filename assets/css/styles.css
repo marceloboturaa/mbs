@@ -5,6 +5,7 @@
   --rule: #d8d3ca;
   --strong-rule: #2a2a2a;
   --soft-green: #95ab92;
+  --accent-red: #b32626;
 }
 
 * {
@@ -446,6 +447,20 @@ h2 {
   padding-top: 0.85rem;
 }
 
+.step-row.is-accent .step-formula {
+  color: var(--accent-red);
+  padding-left: 0.9rem;
+  border-left: 3px solid var(--accent-red);
+}
+
+.step-row.is-accent .step-formula mjx-container {
+  color: inherit;
+}
+
+.step-row.is-accent .step-text {
+  color: var(--accent-red);
+}
+
 .solution-end {
   width: 100%;
   margin-top: 0.35rem;
@@ -760,7 +775,48 @@ body.note-page .page {
   background: #f4f1ea;
 }
 
+.back-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 9999;
+  width: 3rem;
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #181818;
+  border-radius: 999px;
+  background: #181818;
+  color: #ffffff;
+  text-decoration: none;
+  box-shadow: 0 16px 34px rgba(24, 24, 24, 0.28);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.back-to-top:hover,
+.back-to-top:focus-visible {
+  background: #2a2a2a;
+}
+
+.back-to-top span {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
 @media (max-width: 640px) {
+  .back-to-top {
+    right: max(0.75rem, env(safe-area-inset-right));
+    bottom: max(0.75rem, env(safe-area-inset-bottom));
+  }
+
+  .back-to-top span {
+    font-size: 1.35rem;
+  }
+
   body.note-page .page {
     width: calc(100% - 0.9rem);
   }
@@ -903,7 +959,8 @@ body.note-page .page {
   .site-footer,
   .exercise-actions,
   .site-canvas,
-  .home-warning {
+  .home-warning,
+  .back-to-top {
     display: none !important;
   }
 

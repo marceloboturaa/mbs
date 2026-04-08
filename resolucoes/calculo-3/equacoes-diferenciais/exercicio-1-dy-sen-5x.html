@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Resolu&ccedil;&atilde;o do exerc&iacute;cio 1 da p&aacute;gina 51 com f&oacute;rmulas em LaTeX, publicada por Marcelo Botura Souza.">
+  <meta name="keywords" content="Marcelo Botura Souza, exerc&iacute;cio 1, p&aacute;gina 51, equa&ccedil;&otilde;es diferenciais, resolu&ccedil;&otilde;es de exerc&iacute;cios, LaTeX">
+  <meta name="author" content="Marcelo Botura Souza">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Exerc&iacute;cio 1 | Resolu&ccedil;&atilde;o">
+  <meta property="og:description" content="Resolu&ccedil;&atilde;o comentada de equa&ccedil;&atilde;o diferencial com f&oacute;rmulas em LaTeX.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <title>Exerc&iacute;cio 1 | Resolu&ccedil;&atilde;o</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/styles.css">
+  <script>
+    window.MathJax = { tex: { inlineMath: [["\\(", "\\)"],["$","$"]], displayMath: [["\\[","\\]"],["$$","$$"]] } };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body id="top">
+  <main class="page">
+    <nav class="site-nav" aria-label="Menu principal">
+      <a class="nav-link" href="../../../index.html">In&iacute;cio</a>
+      <a class="nav-link" href="../../../buscador-resolucoes.html">Exerc&iacute;cios</a>
+      <a class="nav-link" href="../../../notas-de-aula/index.html">Notas de aula</a>
+      <span class="nav-link is-disabled" aria-disabled="true">Resumos</span>
+    </nav>
+
+    <header class="hero">
+      <p class="eyebrow">Resolu&ccedil;&atilde;o</p>
+    </header>
+
+    <div class="exercise-actions"><button class="print-button" type="button" onclick="window.print()">Imprimir</button></div>
+    <section class="exercise-card">
+      <div class="exercise-meta">
+        <span>P&aacute;gina 51</span>
+        <span>Cap. 2.2</span>
+        <span>Exerc&iacute;cio 1</span>
+        <span>Equa&ccedil;&atilde;o diferencial</span>
+      </div>
+      <section class="question-block">
+        <p class="statement">Resolver a equa&ccedil;&atilde;o diferencial \(\dfrac{dy}{dx}=\sin 5x\).</p>
+      </section>
+      <section class="solution-block">
+        <div class="step-row">
+          <div class="step-formula">\[ \frac{dy}{dx}=\sin 5x \;\Longrightarrow\; dy=\sin 5x\,dx \]</div>
+          <div class="step-text">Colocamos a equa&ccedil;&atilde;o na forma diferencial para integrar os dois lados.</div>
+        </div>
+
+        <div class="step-row">
+          <div class="step-formula">\[\int dy=\int \sin 5x\,dx\]</div>
+          <div class="step-text">Integramos ambos os lados da equa&ccedil;&atilde;o.</div>
+        </div>
+
+        <div class="step-row is-accent">
+          <div class="step-formula">\[u=5x,\qquad du=5\,dx\]</div>
+          <div class="step-text">Para enxergar melhor a regra da cadeia, fazemos a substitui&ccedil;&atilde;o \(u=5x\).</div>
+        </div>
+
+        <div class="step-row is-accent">
+          <div class="step-formula">\[\int \sin 5x\,dx=\int \sin u\cdot \frac{du}{5}\]</div>
+          <div class="step-text">A integral fica \(\frac{1}{5}\int \sin u\,du\), mostrando o fator que surge da mudan&ccedil;a de vari&aacute;vel.</div>
+        </div>
+
+        <div class="step-row is-accent">
+          <div class="step-formula">\[\frac{1}{5}\int \sin u\,du=-\frac{1}{5}\cos u + C\]</div>
+          <div class="step-text">Integramos \(\sin u\) e voltamos para a vari&aacute;vel original.</div>
+        </div>
+
+        <div class="step-row">
+          <div class="step-formula">\[y=-\frac{1}{5}\cos 5x + C\]\[\boxed{y=-\frac{1}{5}\cos 5x + C}\]</div>
+          <div class="step-text">Acrescentamos a constante de integra&ccedil;&atilde;o e obtemos a solu&ccedil;&atilde;o geral.</div>
+        </div>
+        <div class="solution-end" aria-label="Fim da resolu&ccedil;&atilde;o">∎</div>
+        <p class="solution-credit">resolu&ccedil;&atilde;o de Marcelo Botura</p>
+      </section>
+    </section>
+    <footer class="site-footer"><p>@sabormatematica | 2026</p></footer><a class="back-to-top" href="#top" aria-label="Voltar ao topo" title="Voltar ao topo"><span aria-hidden="true">↑</span></a>
+  </main>
+</body>
+</html>
