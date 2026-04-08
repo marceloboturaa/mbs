@@ -13,7 +13,8 @@ Páginas principais:
 - /buscador-resolucoes.html: lista principal de exercícios resolvidos
 - /exercicios.html: redirecionamento legado para o buscador
 - /notas-de-aula/index.html: anotações e resumos de aula
-- /resumos-livros/index.html: resumos de livros
+- /resumos/index.html: resumos por tema
+- /resumos/derivada/derivada.html: resumo de derivada
 
 Exercícios publicados no momento:
 - /resolucoes/calculo-3/equacoes-diferenciais/exercicio-11-dx-e-3x-dy-0.html

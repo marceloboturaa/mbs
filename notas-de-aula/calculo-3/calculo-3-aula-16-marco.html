@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Notas de aula de Cálculo III sobre equações diferenciais, com exemplos, gráficos e observações.">
-    <title>Cálculo III · Equações Diferenciais · Notas Completas</title>
+    <meta name="description" content="Notas de aula de CÃ¡lculo III sobre equaÃ§Ãµes diferenciais, com exemplos, grÃ¡ficos e observaÃ§Ãµes.">
+    <title>CÃ¡lculo III Â· EquaÃ§Ãµes Diferenciais Â· Notas Completas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,14 +15,11 @@
     <script>
         window.MathJax = { tex: { inlineMath: [["\\(", "\\)"], ["$", "$"]], displayMath: [["\\[", "\\]"], ["$$", "$$"]] } };
     </script>
-    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>    <link rel="icon" href="/mbs/favicon.ico" sizes="any">
-  <link rel="icon" type="image/svg+xml" href="/mbs/assets/icons/CadernoRedacao.svg" media="(prefers-color-scheme: light)">
-  <link rel="icon" type="image/svg+xml" href="/mbs/assets/icons/CadernoRedacaoBranco.svg" media="(prefers-color-scheme: dark)">
-  <link rel="icon" type="image/png" sizes="16x16" href="/mbs/assets/icons/favicon-16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/mbs/assets/icons/favicon-32.png" media="(prefers-color-scheme: light)">
-  <link rel="icon" type="image/png" sizes="32x32" href="/mbs/assets/icons/favicon-dark-32.png" media="(prefers-color-scheme: dark)">
-  <link rel="icon" type="image/png" sizes="48x48" href="/mbs/assets/icons/favicon-48.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/mbs/assets/icons/apple-touch-icon.png">
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="icon" href="/mbs/icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/mbs/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="/mbs/icons/favicon-96x96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/mbs/icons/apple-touch-icon.png">
   <link rel="manifest" href="/mbs/site.webmanifest">
   <meta name="theme-color" content="#fcfbf7" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#181818" media="(prefers-color-scheme: dark)">
@@ -31,10 +28,10 @@
 <body id="top" class="note-page">
     <main class="page">
         <nav class="site-nav" aria-label="Menu principal">
-            <a class="nav-link" href="../../index.html">Início</a>
-            <a class="nav-link" href="../../buscador-resolucoes.html">Exercícios</a>
+            <a class="nav-link" href="../../index.html">In&iacute;cio</a>
+            <a class="nav-link" href="../../buscador-resolucoes.html">Exerc&iacute;cios</a>
             <a class="nav-link is-current" href="../index.html">Notas de aula</a>
-            <span class="nav-link is-disabled" aria-disabled="true">Resumos</span>
+            <a class="nav-link" href="../../resumos/index.html">Resumos</a>
         </nav>
 
         <article class="paper">
@@ -42,62 +39,62 @@
                 <button class="action-button print-action" type="button" onclick="window.print()">
                     <span>Imprimir</span>
                 </button>
-                <a
-                    class="action-button action-link"
-                    href="../../../cecmtancredoneves/slide/Anota%C3%A7%C3%A3o-Calculo3-16-3.pdf"
-                    download
-                    aria-label="Baixar arquivo original"
-                    title="Arquivo original"
+                <button
+                    class="action-button is-disabled"
+                    type="button"
+                    disabled
+                    aria-disabled="true"
+                    title="Arquivo original LaTeX indisponível"
                 >
                     <span class="button-icon button-icon-latex" aria-hidden="true">TeX</span>
-                    <span>Arquivo original</span>
-                </a>
+                    <span>Arquivo original LaTeX indisponível</span>
+                </button>
             </div>
 
             <header class="hero">
-                <p class="eyebrow">Notas de aula | Cálculo III</p>
+                <p class="eyebrow">Notas de aula | CÃ¡lculo III</p>
                 <div class="subhead">
-                    <span>Equações Diferenciais · Notas de Aula</span>
-                    <span>🗓️ 16/03 · @sabormatematica</span>
+                    <span>EquaÃ§Ãµes Diferenciais Â· Notas de Aula</span>
+                    <span> 16/03 Â· @sabormatematica</span>
                 </div>
             </header>
 
-            <p><strong>Derivadas representam taxas de variação.</strong> Matemáticos fazem análises diferentes das dos
-            físicos, químicos, etc. Desenvolver técnicas para determinar a solução.</p>
+            <p><strong>Derivadas representam taxas de variaÃ§Ã£o.</strong> MatemÃ¡ticos fazem anÃ¡lises diferentes das dos
+            fÃ­sicos, quÃ­micos, etc. Desenvolver t?cnicas para determinar a soluÃ§Ã£o.</p>
 
         <h2>Livro base</h2>
         <ul class="lista">
-            <li>Zill & Cullen – <strong>Equações Diferenciais</strong> (Vol. I e II)</li>
+            <li>Zill & Cullen Â· <strong>EquaÃ§Ãµes Diferenciais</strong> (Vol. I e II)</li>
         </ul>
 
         <h3>Livros complementares</h3>
         <ul class="lista">
-            <li>William Boyce – <em>Equações Diferenciais Elementares</em> (3ª edição)</li>
-            <li>Stewart – <em>Cálculo I</em></li>
+            <li>William Boyce Â· <em>EquaÃ§Ãµes Diferenciais Elementares</em> (3Âª edi??o)</li>
+            <li>Stewart Â· <em>CÃ¡lculo I</em></li>
         </ul>
 
-        <h2>Avaliação</h2>
+        <h2>AvaliaÃ§Ã£o</h2>
         <ul class="lista">
-            <li>1ª Prova: Capítulos I e II</li>
-            <li>2ª Prova: Capítulo IV</li>
-            <li>3ª Prova: Capítulo III</li>
-            <li>4ª Prova: Capítulo VIII (Vol II)</li>
+            <li>1Âª Prova: CapÃ­tulos I e II</li>
+            <li>2Âª Prova: CapÃ­tulo IV</li>
+            <li>3Âª Prova: CapÃ­tulo III</li>
+            <li>4Âª Prova: CapÃ­tulo VIII (Vol II)</li>
         </ul>
-        <p>4 provas e 16 testes. Cada teste (0,5) → 4 testes (2,0). Teste: resolução de exercícios durante a aula.</p>
+        <p>4 provas e 16 testes. Cada teste (0,5) Â· 4 testes (2,0). Teste: resoluÃ§Ã£o de exerc?cios durante a aula.</p>
 
-        <h2>Equações Diferenciais (ED)</h2>
+        <h2>EquaÃ§Ãµes Diferenciais (ED)</h2>
 
-        <h3>1. Definição (provisória)</h3>
-        <p>Uma equação diferencial (ED) é uma equação envolvendo as derivadas de uma variável dependente em relação a
-            uma ou mais variáveis independentes.</p>
+        <h3>1. DefiniÃ§Ã£o (provisÃ³ria)</h3>
+        <p>Uma equa??o diferencial (ED) Â· uma equa??o envolvendo as derivadas de uma variÃ¡vel dependente em relaÃ§Ã£o a
+            uma ou mais variÃ¡veis independentes.</p>
 
-        <h3>2. Classificação de uma ED</h3>
-        <p>Podemos classificar em três categorias: <strong>Tipo</strong>, <strong>Ordem</strong>,
+        <h3>2. Classifica??o de uma ED</h3>
+        <p>Podemos classificar em trÃªs categorias: <strong>Tipo</strong>, <strong>Ordem</strong>,
             <strong>Linearidade</strong>.</p>
 
-        <h3>3. Classificação por tipo</h3>
-        <p><strong>a) Equação Diferencial Ordinária (EDO)</strong><br>Contém somente derivadas ordinárias de uma
-            variável dependente em relação a uma única variável independente.</p>
+        <h3>3. Classifica??o por tipo</h3>
+        <p><strong>a) Equa??o Diferencial Ordin?ria (EDO)</strong><br>ContÃ©m somente derivadas ordinÃ¡rias de uma
+            variÃ¡vel dependente em relaÃ§Ã£o a uma Ãºnica variÃ¡vel independente.</p>
         <div class="exemplo-bloco">
             <strong>Exemplos:</strong>
             <div class="equation">\[
@@ -111,11 +108,11 @@
                 \text{(iii)}\quad (x^5 + x^2)\frac{d^3 y}{dx^3} + 15\frac{dy}{dx}\,y + y^2 = e^{x^2 + \sqrt{x}} ; \, \,
                 \, y=y(x)
                 \]</div>
-            <p><em>Variável independente \(x\), dependente \(y\).</em></p>
+            <p><em>Vari?vel independente \(x\), dependente \(y\).</em></p>
         </div>
 
-        <p><strong>b) Equação Diferencial Parcial (EDP)</strong><br>Contém derivadas parciais de uma variável dependente
-            em relação a duas ou mais variáveis independentes.</p>
+        <p><strong>b) Equa??o Diferencial Parcial (EDP)</strong><br>ContÃ©m derivadas parciais de uma variÃ¡vel dependente
+            em relaÃ§Ã£o a duas ou mais variÃ¡veis independentes.</p>
         <div class="exemplo-bloco">
             <strong>Exemplos:</strong>
             <div class="equation">\[
@@ -131,18 +128,18 @@
                 \]</div>
         </div>
 
-        <h3>4. Classificação por ordem</h3>
-        <p>A ordem da equação é dada pelo termo que contém a <strong>maior ordem da derivada</strong>.</p>
+        <h3>4. Classifica??o por ordem</h3>
+        <p>A ordem da equa??o Â· dada pelo termo que cont?m a <strong>maior ordem da derivada</strong>.</p>
         <ul class="lista">
-            <li>1ª ordem: (ii), (iv)</li>
-            <li>2ª ordem: (i), (v)</li>
-            <li>3ª ordem: (iii)</li>
-            <li>4ª ordem: (vi)</li>
+            <li>1Âª ordem: (ii), (iv)</li>
+            <li>2Âª ordem: (i), (v)</li>
+            <li>3Âª ordem: (iii)</li>
+            <li>4Âª ordem: (vi)</li>
         </ul>
 
-        <h3>5. Equação diferencial ordinária de n-ésima ordem</h3>
-        <p>Doravante restringimos ao estudo de EDOs. Seja \(\Omega\) uma região do \(\mathbb{R}^{n+1}\) e \(f:\Omega
-            \subset \mathbb{R}^{n+1} \to \mathbb{R}\) contínua. Uma EDO de n-ésima ordem é dada por:</p>
+        <h3>5. Equa??o diferencial ordinÃ¡ria de n-?sima ordem</h3>
+        <p>Doravante restringimos ao estudo de EDOs. Seja \(\Omega\) uma regi?o do \(\mathbb{R}^{n+1}\) e \(f:\Omega
+            \subset \mathbb{R}^{n+1} \to \mathbb{R}\) cont?nua. Uma EDO de n-?sima ordem Â· dada por:</p>
         <div class="equation">\[
             F(x, y, y', y'', \ldots, y^{(n)}) = 0,\quad y = y(x)
             \]</div>
@@ -158,22 +155,22 @@
             \text{(iii)}\quad F(x,y,y',y'',y''') = (x^5 + x^2) + 15y' \cdot y + y^2 - e^{x^2 + \sqrt{x}}
             \]</div>
 
-        <h3>6. Classificação de uma EDO quanto à linearidade</h3>
-        <p>Uma EDO de ordem \(n\) é <strong>linear</strong> se tem a forma:</p>
+        <h3>6. Classifica??o de uma EDO quanto Â· linearidade</h3>
+        <p>Uma EDO de ordem \(n\) Â· <strong>linear</strong> se tem a forma:</p>
         <div class="equation">\[
             \sum_{k=0}^{n} a_k(x)\frac{d^k y}{dx^k} = a_n(x)\frac{d^n y}{dx^n} + \dots + a_1(x)\frac{dy}{dx} + a_0(x)y =
             g(x)
             \]</div>
 
         <div class="obs">
-            <strong>Observações:</strong>
+            <strong>Observa??es:</strong>
             <ol class="lista" style="margin-top: 0.3rem;">
-                <li>Os coeficientes \(a_k(x)\) dependem unicamente da variável independente \(x\).</li>
-                <li>Se a EDO não possuir a forma acima, então ela é chamada de <strong>não linear</strong>.</li>
+                <li>Os coeficientes \(a_k(x)\) dependem unicamente da variÃ¡vel independente \(x\).</li>
+                <li>Se a EDO nÃ£o possuir a forma acima, ent?o ela Â· chamada de <strong>nÃ£o linear</strong>.</li>
             </ol>
         </div>
 
-        <h4>São lineares as equações:</h4>
+        <h4>S?o lineares as equaÃ§Ãµes:</h4>
         <div class="equation">\[
             \text{(i)}\quad x\,y' + \sin x \, y - \sqrt{x^3} = 0 \quad (a_1(x)=x,\; a_0(x)=\sin x,\; g(x)=\sqrt{x^3})
             \]</div>
@@ -187,9 +184,9 @@
             \]</div>
         <p>\(a_5(x)=1,\; a_4(x)=0,\; a_3(x)=3,\; a_2(x)=-19x,\; a_1(x)=0,\; a_0(x)=0\)</p>
 
-        <h4>Não são lineares as equações:</h4>
+        <h4>NÃ£o s?o lineares as equaÃ§Ãµes:</h4>
         <div class="equation">\[
-            \text{(iv)}\quad (y')^2 + \sin(x)\,y = \sqrt{x^3} \quad\text{(pois \((y')^2\) não está na forma linear)}
+            \text{(iv)}\quad (y')^2 + \sin(x)\,y = \sqrt{x^3} \quad\text{(pois \((y')^2\) nÃ£o est? na forma linear)}
             \]</div>
         <div class="equation">\[
             \text{(v)}\quad x\,y'' - e^x - y^2 + \int_0^x e^{-t^2}\,dt = 0 \quad\text{(aparece \(y^2\))}
@@ -198,12 +195,12 @@
             \text{(vi)}\quad y\,y' + x^2\cos(x^2) + y''' = 0 \quad\text{(produto \(y\cdot y'\))}
             \]</div>
         <div class="equation">\[
-            \text{(vii)}\quad \sqrt{x}\,y' + y^{1/2} = 3 \quad\text{(potência \(y^{1/2}\))}
+            \text{(vii)}\quad \sqrt{x}\,y' + y^{1/2} = 3 \quad\text{(pot?ncia \(y^{1/2}\))}
             \]</div>
 
-        <h3>7. Solução de uma EDO</h3>
-        <p><strong>Definição:</strong> Uma função real \(\phi\) de classe \(C^n(I)\) (\(I\) é um intervalo não
-            degenerado da reta) chama-se <strong>solução</strong> de uma EDO</p>
+        <h3>7. Solu??o de uma EDO</h3>
+        <p><strong>DefiniÃ§Ã£o:</strong> Uma fun??o real \(\phi\) de classe \(C^n(I)\) (\(I\) Ã© um intervalo nÃ£o
+            degenerado da reta) chama-se <strong>soluÃ§Ã£o</strong> de uma EDO</p>
         <div class="equation">\[
             F\left(x, y, \frac{dy}{dx}, \ldots, \frac{d^n y}{dx^n}\right) = 0, \quad F:\Omega \subset \mathbb{R}^{n+1}
             \to \mathbb{R}
@@ -215,33 +212,33 @@
         </ol>
 
         <h4>Exemplo: \(y' = y^2\)</h4>
-        <p>\(F(x,y,y') = y' - y^2\). Afirmamos que \(\phi(x) = \dfrac{1}{c - x}\) (com \(c\) constante real) é solução.
+        <p>\(F(x,y,y') = y' - y^2\). Afirmamos que \(\phi(x) = \dfrac{1}{c - x}\) (com \(c\) constante real) Â· soluÃ§Ã£o.
             De fato:</p>
         <div class="equation">\[
             \phi'(x) = (-1)(c - x)^{-2}(-1) = \frac{1}{(c - x)^2} = \phi(x)^2
             \]</div>
-        <p>Logo \(\phi' = \phi^2\). A solução trivial \(\phi(x) \equiv 0\) também é solução.</p>
+        <p>Logo \(\phi' = \phi^2\). A soluÃ§Ã£o trivial \(\phi(x) \equiv 0\) tamb?m Â· soluÃ§Ã£o.</p>
 
         <div class="obs">
-            <strong>Observações:</strong>
+            <strong>Observa??es:</strong>
             <ul class="lista">
-                <li>Solução trivial: \(\phi(x) = 0\), \(\forall x \in \mathbb{R}\).</li>
-                <li>Para cada \(c \in \mathbb{R}\) temos uma solução diferente → infinitas soluções.</li>
+                <li>Solu??o trivial: \(\phi(x) = 0\), \(\forall x \in \mathbb{R}\).</li>
+                <li>Para cada \(c \in \mathbb{R}\) temos uma soluÃ§Ã£o diferente Â· infinitas solu??es.</li>
             </ul>
         </div>
 
-        <!-- GRÁFICO 1: Solução trivial y = 0 -->
+        <!-- GR?FICO 1: Solu??o trivial y = 0 -->
         <div class="grafico-container">
-            <h4 style="margin: 0 0 0.5rem 0;">1) Solução trivial</h4>
+            <h4 style="margin: 0 0 0.5rem 0;">1) Solu??o trivial</h4>
             <div class="equation">\[
                 \phi(x) = 0 \quad \forall x \in \mathbb{R}, \quad I = \mathbb{R}
                 \]</div>
             <canvas id="graficoTrivial" width="600" height="350"
                 style="max-width:100%; height:auto; border:1px solid #eee"></canvas>
-            <div class="grafico-legenda"> Gráfico da solução trivial \(y = 0\)</div>
+            <div class="grafico-legenda"> Gr?fico da soluÃ§Ã£o trivial \(y = 0\)</div>
         </div>
 
-        <!-- GRÁFICO 2: ϕ(x) = 1/(c - x) com c = 1, ramo esquerdo x < c -->
+        <!-- GR?FICO 2: ?(x) = 1/(c - x) com c = 1, ramo esquerdo x < c -->
         <div class="grafico-container">
             <h4 style="margin: 0 0 0.5rem 0;">2) \( 
             \quad c \in \mathbb{R} \quad \phi(x) = \frac{1}{c - x}
@@ -251,10 +248,10 @@
                 \]</div>
             <canvas id="graficoRamoEsquerdo" width="600" height="350"
                 style="max-width:100%; height:auto; border:1px solid #eee"></canvas>
-            <div class="grafico-legenda"> Ramo esquerdo: \(x \in (-\infty, 1)\) — assíntota vertical em \(x=1\)</div>
+            <div class="grafico-legenda"> Ramo esquerdo: \(x \in (-\infty, 1)\) Â· ass?ntota vertical em \(x=1\)</div>
         </div>
 
-        <!-- GRÁFICO 3: ϕ(x) = 1/(c - x) com c = 1, ramo direito x > c -->
+        <!-- GR?FICO 3: ?(x) = 1/(c - x) com c = 1, ramo direito x > c -->
         <div class="grafico-container">
             <h4 style="margin: 0 0 0.5rem 0;">
             <div class="equation">\[
@@ -262,10 +259,10 @@
                 \]</div>
             <canvas id="graficoRamoDireito" width="600" height="350"
                 style="max-width:100%; height:auto; border:1px solid #eee"></canvas>
-            <div class="grafico-legenda"> Ramo direito: \(x \in (1, +\infty)\) — assíntota vertical em \(x=1\)</div>
+            <div class="grafico-legenda"> Ramo direito: \(x \in (1, +\infty)\) Â· ass?ntota vertical em \(x=1\)</div>
         </div>
 
-        <!-- GRÁFICO 4: Dois ramos + assíntotas (completo) -->
+        <!-- GR?FICO 4: Dois ramos + ass?ntotas (completo) -->
         <div class="grafico-container">
             <h4 style="margin: 0 0 0.5rem 0;">
             </h4>
@@ -276,20 +273,20 @@
             <canvas id="graficoCompleto" width="600" height="350"
                 style="max-width:100%; height:auto; border:1px solid #eee"></canvas>
             <div class="grafico-legenda">
-                Assíntota vertical \(x = c\) (linha tracejada) e assíntota horizontal \(y = 0\)<br>
-                <span class="assintota-texto">Solução trivial \(y=0\) (eixo x)</span>
+                Ass?ntota vertical \(x = c\) (linha tracejada) e ass?ntota horizontal \(y = 0\)<br>
+                <span class="assintota-texto">Solu??o trivial \(y=0\) (eixo x)</span>
             </div>
         </div>
 
         <h4>(b) Considerando a EDO \(e^{y''} = -\pi\)</h4>
-        <p>\(F(x,y,y',y'') = e^{y''} + \pi\) — <strong>Não existe solução!!</strong> (exponencial é sempre positiva)</p>
-        <p>\((y')^2 + y^2 + 1 = 0\) — <strong>Não existe solução!!</strong></p>
+        <p>\(F(x,y,y',y'') = e^{y''} + \pi\) Â· <strong>NÃ£o existe soluÃ§Ã£o!!</strong> (exponencial Â· sempre positiva)</p>
+        <p>\((y')^2 + y^2 + 1 = 0\) Â· <strong>NÃ£o existe soluÃ§Ã£o!!</strong></p>
 
         <h4>(c) \((y')^2 + x^2 y^2 = 0\)</h4>
-        <p>Possui somente a solução trivial \(\phi(x) = 0\), \(\forall x \in \mathbb{R}\).</p>
+        <p>Possui somente a soluÃ§Ã£o trivial \(\phi(x) = 0\), \(\forall x \in \mathbb{R}\).</p>
 
         <div class="obs">
-            <strong>📌 Observação final:</strong> Fazer exercícios das páginas 11/12 do material (Zill & Cullen).
+            <strong>?? Observa??o final:</strong> Fazer exerc?cios das p?ginas 11/12 do material (Zill & Cullen).
         </div>
 
        
@@ -301,7 +298,7 @@
     </main>
 
     <script>
-        // Função auxiliar para desenhar grade e eixos
+        // Fun??o auxiliar para desenhar grade e eixos
         function desenharEixos(ctx, width, height, xMin, xMax, yMin, yMax) {
             const xZero = -xMin / (xMax - xMin) * width;
             const yZero = height - (-yMin / (yMax - yMin) * height);
@@ -348,7 +345,7 @@
             ctx.lineTo(xZero + 4, 8);
             ctx.fill();
 
-            // Rótulos
+            // R?tulos
             ctx.font = "12px 'Source Sans 3'";
             ctx.fillStyle = "#555";
             ctx.fillText("x", width - 12, yZero - 6);
@@ -410,7 +407,7 @@
             ctx.setLineDash([]);
         }
 
-        // Gráfico 1: Trivial
+        // Gr?fico 1: Trivial
         const canvas1 = document.getElementById('graficoTrivial');
         if (canvas1) {
             const ctx1 = canvas1.getContext('2d');
@@ -421,10 +418,10 @@
             desenharFuncao(ctx1, w, h, xMin, xMax, yMin, yMax, (x) => 0, "#2c5f2d", 2.5);
             ctx1.fillStyle = "#2c5f2d";
             ctx1.font = "bold 13px 'Source Sans 3'";
-            ctx1.fillText("y = 0 (solução trivial)", 20, 40);
+            ctx1.fillText("y = 0 (soluÃ§Ã£o trivial)", 20, 40);
         }
 
-        // Gráfico 2: Ramo esquerdo (x < c) com c = 1
+        // Gr?fico 2: Ramo esquerdo (x < c) com c = 1
         const canvas2 = document.getElementById('graficoRamoEsquerdo');
         if (canvas2) {
             const ctx2 = canvas2.getContext('2d');
@@ -441,10 +438,10 @@
             ctx2.font = "bold 12px 'Source Sans 3'";
             ctx2.fillText("y = 1/(1-x)", 20, 50);
             ctx2.fillStyle = "#666";
-            ctx2.fillText("x = 1 (assíntota vertical)", w - 140, 70);
+            ctx2.fillText("x = 1 (ass?ntota vertical)", w - 140, 70);
         }
 
-        // Gráfico 3: Ramo direito (x > c) c = 1
+        // Gr?fico 3: Ramo direito (x > c) c = 1
         const canvas3 = document.getElementById('graficoRamoDireito');
         if (canvas3) {
             const ctx3 = canvas3.getContext('2d');
@@ -461,7 +458,7 @@
             ctx3.fillText("y = 1/(1-x)", 20, 50);
         }
 
-        // Gráfico 4: Completo (ambos ramos + assíntota horizontal)
+        // Gr?fico 4: Completo (ambos ramos + ass?ntota horizontal)
         const canvas4 = document.getElementById('graficoCompleto');
         if (canvas4) {
             const ctx4 = canvas4.getContext('2d');
@@ -481,23 +478,25 @@
             }, "#d97706", 2.5);
             desenharAssintotaVertical(ctx4, w, h, xMin, xMax, yMin, yMax, 1, "#cc4444", 2);
             desenharAssintotaHorizontal(ctx4, w, h, xMin, xMax, yMin, yMax, 0, "#2c5f2d", 2);
-            // Solução trivial
+            // Solu??o trivial
             desenharFuncao(ctx4, w, h, xMin, xMax, yMin, yMax, (x) => 0, "#2c5f2d", 1.8);
 
             ctx4.fillStyle = "#d97706";
             ctx4.font = "bold 12px 'Source Sans 3'";
             ctx4.fillText("y = 1/(1-x)", 20, 50);
             ctx4.fillStyle = "#2c5f2d";
-            ctx4.fillText("y = 0 (solução trivial)", 20, 80);
+            ctx4.fillText("y = 0 (soluÃ§Ã£o trivial)", 20, 80);
             ctx4.fillStyle = "#cc4444";
-            ctx4.fillText("x = 1 (assíntota vertical)", w - 150, 60);
+            ctx4.fillText("x = 1 (ass?ntota vertical)", w - 150, 60);
             ctx4.fillStyle = "#2c5f2d";
-            ctx4.fillText("y = 0 (assíntota horizontal)", w - 150, 90);
+            ctx4.fillText("y = 0 (ass?ntota horizontal)", w - 150, 90);
         }
     </script>
 <script defer src="../../assets/js/btn-topo.js"></script></body>
 
 </html>
+
+
 
 
 

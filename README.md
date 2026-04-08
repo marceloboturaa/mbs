@@ -28,7 +28,8 @@ O projeto organiza exercícios resolvidos de equações diferenciais em páginas
 - `exercicios.html`: redirecionamento legado para o buscador
 - `notas-de-aula/index.html`: página reservada para notas de aula
 - `notas-de-aula.html`: redirecionamento legado para a pasta de notas
-- `resumos-livros/index.html`: página reservada para resumos de livros
+- `resumos/index.html`: página principal de resumos
+- `resumos/derivada/derivada.html`: resumo de derivada
 - `resumos-livros.html`: redirecionamento legado para a pasta de resumos
 - `assets/css/styles.css`: estilos globais
 - `assets/js/main.js`: lógica do buscador
