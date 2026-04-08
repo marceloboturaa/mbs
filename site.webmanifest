@@ -1,6 +1,7 @@
 {
-  "name": "Marcelo Botura Souza",
-  "short_name": "MBS",
+  "name": "Na Matemática",
+  "short_name": "Na Mat.",
+  "id": "/mbs/",
   "start_url": "/mbs/index.html",
   "scope": "/mbs/",
   "display": "standalone",
@@ -10,12 +11,14 @@
     {
       "src": "/mbs/assets/icons/android-chrome-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/mbs/assets/icons/android-chrome-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
