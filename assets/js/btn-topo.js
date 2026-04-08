@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function enhanceSiteNav() {
     var nav = document.querySelector(".site-nav");
-    var basePath = "/mbs/";
+    var basePath = window.location.pathname.indexOf("/mbs/") === 0 ? "/mbs/" : "/";
     var currentSection;
     var links;
     var markup;
