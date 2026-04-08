@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Guia Mestre Supremo sobre derivadas. DefiniÃ§Ãµes aprofundadas, exemplos passo a passo e aplicaÃ§Ãµes no mundo real.">
-    <title>O Guia Mestre da Derivada: EdiÃ§Ã£o Expandida</title>
+        content="Guia mestre sobre derivadas, com definições aprofundadas, exemplos passo a passo e aplicações no mundo real.">
+    <title>O Guia Mestre da Derivada: Edição Expandida</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,39 +78,38 @@
     <main class="page">
         <nav class="site-nav" aria-label="Menu principal">
             <a class="nav-link" href="../../index.html">In&iacute;cio</a>
-            <a class="nav-link" href="../../buscador-resolucoes.html">Exerc&iacute;cios</a>
-            <a class="nav-link" href="../../notas-de-aula/index.html">Notas de aula</a>
+            <a class="nav-link" href="../../exercicios.html">Exerc&iacute;cios</a>
             <a class="nav-link is-current" href="../index.html">Resumos</a>
         </nav>
         <article class="paper">
 
             <header class="hero">
-                <p class="eyebrow">MatemÃ¡tica NÃ­vel Mestre</p>
+                <p class="eyebrow">Matemática Nível Mestre</p>
                 <div class="subhead">
                     <span>O Guia Definitivo da Derivada</span>
-                    <span>EdiÃ§Ã£o Expandida: Conceitos, RaÃ­zes e Regras AvanÃ§adas</span>
+                    <span>Edição Expandida: Conceitos, Raízes e Regras Avançadas</span>
                 </div>
             </header>
 
-            <h2>1. A Grande Pergunta: O que é Derivar?</h2>
-            <p>Se vocÃª perguntar para um matemático engravatado, ele dirá: <em>"A derivada Ã© o limite da razão
+            <h2>1. A Grande Pergunta: O que é derivar?</h2>
+            <p>Se você perguntar para um matemático engravatado, ele dirá: <em>"A derivada é o limite da razão
                     incremental e representa o coeficiente angular da reta tangente."</em>. Assustador, né? Vamos
                 traduzir isso para o mundo real.</p>
 
             <div class="conceito-box">
-                <strong class="destaque-verde">Definição Gamer (A Reta Tangente)</strong>
-                <p style="margin-top: 0.5rem; margin-bottom: 0;">Imagine que vocÃª estÃ¡ jogando Mario Kart. A pista faz
-                    uma curva fechada em formato de "U" (essa Ã© a sua funÃ§Ã£o original, o mapa). Se no meio da curva o
+                <strong class="destaque-verde">Definição Gamer: a reta tangente</strong>
+                <p style="margin-top: 0.5rem; margin-bottom: 0;">Imagine que você está jogando Mario Kart. A pista faz
+                    uma curva fechada em formato de "U" (essa é a sua função original, o mapa). Se no meio da curva o
                     seu kart derrapar e perder o controle, ele vai sair voando reto, saindo pela tangente!
-                    <br><br><strong>A Derivada Ã© a matemÃ¡tica calculando a direÃ§Ã£o exata e a forÃ§a dessa "voada" no
+                    <br><br><strong>A derivada é a matemática calculando a direção exata e a força dessa "voada" no
                         momento do derrape.</strong> Ela mede a inclinação exata da montanha-russa em um único
                     milissegundo.</p>
             </div>
 
             <div class="reference-inline"></div>
 
-            <h2>2. O Mistério Geométrico: Por que subtraímos 1?</h2>
-            <p>A regra de ouro que vocÃª vai usar sempre manda subtrair \(1\) do expoente. Isso acontece porque a mudança
+            <h2>2. O Mistério geométrico: por que subtraímos 1?</h2>
+            <p>A regra de ouro que você vai usar sempre manda subtrair \(1\) do expoente. Isso acontece porque a mudança
                 sempre ocorre em uma "dimensão abaixo" do objeto original. O volume (3D) muda pela área de sua
                 superfície (2D). A área (2D) muda empurrando suas linhas de borda (1D).</p>
 
@@ -123,7 +122,7 @@
                 <rect x="50" y="50" width="120" height="120" stroke="var(--ink, #333)" stroke-width="2"
                     fill="var(--paper, #fcfbf7)" />
                 <text x="110" y="115" text-anchor="middle" font-family="Source Sans 3" font-size="16px"
-                    font-weight="bold" fill="var(--ink, #181818)">área = x?</text>
+                    font-weight="bold" fill="var(--ink, #181818)">área = x²?</text>
                 <line x1="185" y1="110" x2="235" y2="110" stroke="var(--muted, #888)" stroke-width="2"
                     marker-end="url(#arrowhead)" />
                 <text x="210" y="95" text-anchor="middle" font-family="Fraunces" font-size="14px" font-style="italic"
@@ -140,12 +139,12 @@
 
             <div class="reference-inline"></div>
 
-            <h2>3. Aquecimento: A Regra do Tombo e PolinÃ´mios</h2>
+            <h2>3. Aquecimento: A Regra do Tombo e Polinômios</h2>
             <p>O combo clássico: <strong>Derruba o expoente multiplicando e tira 1 de vida lá em cima</strong>. A
-                derivada da soma ? feita derivando cada pedacinho separadamente.</p>
+                derivada da soma é feita derivando cada pedacinho separadamente.</p>
 
             <div class="question-block">
-                <h3 class="reference-related-title">Revisão Rápida: O Polin?mio</h3>
+                <h3 class="reference-related-title">Revisão Rápida: O Polinômio</h3>
                 <p class="statement">Ache a derivada de \( f(x) = 5x^4 - 2x^2 + 8x - 12 \).</p>
             </div>
 
@@ -153,7 +152,7 @@
                 <div class="step-row is-accent">
                     <div class="step-formula">\[ f'(x) = (4 \cdot 5x^3) - (2 \cdot 2x^1) + (8) - (0) \]</div>
                     <div class="step-text"><strong>Aplicação Direta:</strong> O 4 cai e encontra o 5. O 2 cai e encontra
-                        o 2. O \(8x\) perde o \(x\) (Regra de Ouro). O \(12\) vira pÃ© porque Ã© uma constante parada
+                        o 2. O \(8x\) perde o \(x\) (Regra de Ouro). O \(12\) vira pé porque é uma constante parada
                         (Regra de Ouro 2).</div>
                 </div>
                 <div class="step-row">
@@ -165,13 +164,13 @@
             <div class="reference-inline"></div>
 
             <h2>4. Nova Habilidade: O Disfarce da Raiz (Exemplo Inédito 1)</h2>
-            <p>Na matemÃ¡tica, nÃ£o existe "Regra da Raiz". Por que? Porque a raiz quadrada ? apenas um expoente usando um
+            <p>Na matemática, não existe "Regra da Raiz". Por que? Porque a raiz quadrada é apenas um expoente usando um
                 disfarce de fração! Sabendo disso, a Regra do Tombo funciona perfeitamente.</p>
 
             <div class="conceito-box">
                 <strong>O Truque do Disfarce:</strong>
-                <p style="margin-top: 0.5rem; margin-bottom: 0;">Qualquer raiz quadrada Ã© a mesma coisa que elevar a
-                    "meio". Ou seja: \( \sqrt{x} = x^{\frac{1}{2}} \). O número que estÃ¡ dentro vai pra cima, o tipo de
+                <p style="margin-top: 0.5rem; margin-bottom: 0;">Qualquer raiz quadrada é a mesma coisa que elevar a
+                    "meio". Ou seja: \( \sqrt{x} = x^{\frac{1}{2}} \). O número que está dentro vai pra cima, o tipo de
                     raiz vai pra baixo.</p>
             </div>
 
@@ -189,8 +188,8 @@
                 <div class="step-row is-accent">
                     <div class="step-formula">\[ f'(x) = \frac{1}{2} \cdot x^{\frac{1}{2} - 1} \]</div>
                     <div class="step-text"><strong>Passo 2: O Tombo.</strong> O \(1/2\) caiu para a frente
-                        multiplicando. Lá em cima, temos que subtrair 1 inteiro de meio (\( \frac{1}{2} - 1 \)). Se vocÃª
-                        tem meia maçã e deve uma maçã inteira, vocÃª fica devendo meia maçã! Logo o resultado ? \(-1/2\).
+                        multiplicando. Lá em cima, temos que subtrair 1 inteiro de meio (\( \frac{1}{2} - 1 \)). Se você
+                        tem meia maçã e deve uma maçã inteira, você fica devendo meia maçã! Logo o resultado é \(-1/2\).
                     </div>
                 </div>
                 <div class="step-row">
@@ -200,7 +199,7 @@
                 </div>
                 <div class="step-row">
                     <div class="step-formula">\[ f'(x) = \frac{1}{2\sqrt{x}} \]</div>
-                    <div class="step-text"><strong>Passo 4: Voltando ao normal (Chefão EstÃ¡tico).</strong> O sinal de
+                    <div class="step-text"><strong>Passo 4: Voltando ao normal (Chefão Estático).</strong> O sinal de
                         menos joga o \(x\) para baixo na fração. A fração \(1/2\) no expoente volta a virar raiz.
                         Resultado final impecável!</div>
                 </div>
@@ -208,78 +207,78 @@
 
             <div class="reference-inline"></div>
 
-            <h2>5. Derivando Duas Vezes: A AceleraÃ§Ã£o (Exemplo Inédito 2)</h2>
-            <p>O que acontece se vocÃª derivar uma funÃ§Ã£o, e depois derivar a derivada? VocÃª cria a <strong>Derivada
-                    Segunda</strong> (\( f''(x) \)). Na física, isso Ã© o coraÃ§Ã£o do movimento.</p>
+            <h2>5. Derivando Duas Vezes: A Aceleração (Exemplo Inédito 2)</h2>
+            <p>O que acontece se você derivar uma função, e depois derivar a derivada? Você cria a <strong>Derivada
+                    Segunda</strong> (\( f''(x) \)). Na física, isso é o coração do movimento.</p>
 
             <ul class="lista">
-                <li>Funé?o Original \( S(t) \): Ã© o <strong>GPS</strong>. Diz a Posição do carro.</li>
-                <li>Primeira Derivada \( S'(t) \): Ã© o <strong>VelocÃ­metro</strong>. Diz a Velocidade.</li>
-                <li>Segunda Derivada \( S''(t) \): Ã© o <strong>Acelerador</strong>. Diz o quanto vocÃª afundou o pÃ© no
+                <li>Função Original \( S(t) \): é o <strong>GPS</strong>. Diz a posição do carro.</li>
+                <li>Primeira Derivada \( S'(t) \): é o <strong>Velocímetro</strong>. Diz a Velocidade.</li>
+                <li>Segunda Derivada \( S''(t) \): é o <strong>Acelerador</strong>. Diz o quanto você afundou o pé no
                     pedal para ganhar mais velocidade!</li>
             </ul>
 
             <div class="question-block">
                 <h3 class="reference-related-title">Exemplo Passo a Passo: O Foguete da SpaceX</h3>
-                <p class="statement">A posiÃ§Ã£o de um foguete subindo no cÃ©u em metros ? \( P(t) = 4t^3 + 2t^2 \).
-                    Descubra a fórmula da AceleraÃ§Ã£o dele.</p>
+                <p class="statement">A posição de um foguete subindo no céu em metros é \( P(t) = 4t^3 + 2t^2 \).
+                    Descubra a fórmula da Aceleração dele.</p>
             </div>
 
             <div class="solution-block">
                 <div class="step-row">
                     <div class="step-formula">\[ P(t) = 4t^3 + 2t^2 \]</div>
-                    <div class="step-text"><strong>Passo 1: O GPS.</strong> Essa Ã© a funÃ§Ã£o da posiÃ§Ã£o. Precisamos
+                    <div class="step-text"><strong>Passo 1: O GPS.</strong> Essa é a função da posição. Precisamos
                         derivar duas vezes para chegar na aceleração.</div>
                 </div>
                 <div class="step-row is-accent">
                     <div class="step-formula">\[ P'(t) = (3 \cdot 4t^2) + (2 \cdot 2t^1) = 12t^2 + 4t \]</div>
-                    <div class="step-text"><strong>Passo 2: Achando a Velocidade (1Ã¯Â¿Â½ Derivada).</strong> Aplicamos o
+                    <div class="step-text"><strong>Passo 2: Achando a Velocidade (1ª derivada).</strong> Aplicamos o
                         tombo padrão. O 3 caiu multiplicando o 4 (\(=12\)). O 2 caiu multiplicando o 2 (\(=4\)). Achamos
                         a velocidade!</div>
                 </div>
                 <div class="step-row is-accent"
                     style="background: rgba(179, 38, 38, 0.05); border-left: 4px solid var(--accent-red);">
                     <div class="step-formula">\[ P''(t) = (2 \cdot 12t^1) + 4 = 24t + 4 \]</div>
-                    <div class="step-text"><strong>Passo 3: Achando a AceleraÃ§Ã£o (2Ã¯Â¿Â½ Derivada).</strong> Agora pegamos
+                    <div class="step-text"><strong>Passo 3: Achando a Aceleração (2ª derivada).</strong> Agora pegamos
                         o \(12t^2 + 4t\) e derivamos de novo! O 2 cai multiplicando o 12 (\(=24\)). O \(4t\) perde o t e
-                        vira apenas \(4\). Pronto! \(24t + 4\) Ã© o pulo do gato.</div>
+                        vira apenas \(4\). Pronto! \(24t + 4\) é o pulo do gato.</div>
                 </div>
             </div>
 
             <div class="reference-inline"></div>
 
             <h2>6. A Regra da "Boneca Russa": Regra da Cadeia (Exemplo Inédito 3)</h2>
-            <p>Até agora lidamos com funé?es simples. Mas e se tivermos uma funÃ§Ã£o gigante trancada dentro de parênteses
+            <p>Até agora lidamos com funções simples. Mas e se tivermos uma função gigante trancada dentro de parênteses
                 com um expoente do lado de fora? Pense nisso como uma <strong>Matrioska</strong> (aquelas bonecas russas
                 que têm outra menor dentro).</p>
 
             <div class="conceito-box">
                 <strong>O Truque da Cadeia:</strong>
                 <p style="margin-top: 0.5rem; margin-bottom: 0;"><strong>Derive de Fora para Dentro.</strong><br>1.
-                    Derive a casca de fora (dÃ© o tombo no expoente de fora) copiando exatamente o que t? dentro.<br>2.
+                    Derive a casca de fora (dê o tombo no expoente de fora) copiando exatamente o que está dentro.<br>2.
                     Multiplique o resultado pela derivada da pecinha que estava escondida lá dentro.</p>
             </div>
 
             <div class="question-block">
                 <h3 class="reference-related-title">Exemplo Passo a Passo: Quebrando a Casca</h3>
-                <p class="statement">Derive a funÃ§Ã£o \( f(x) = (3x^2 + 5)^4 \).</p>
+                <p class="statement">Derive a função \( f(x) = (3x^2 + 5)^4 \).</p>
             </div>
 
             <div class="solution-block">
                 <div class="step-row">
                     <div class="step-formula">\[ f(x) = (3x^2 + 5)^4 \]</div>
-                    <div class="step-text"><strong>Passo 1: Visualizar.</strong> O expoente \(4\) Ã© a casca. A funÃ§Ã£o
-                        \(3x^2 + 5\) Ã© o recheio preso lá dentro.</div>
+                    <div class="step-text"><strong>Passo 1: Visualizar.</strong> O expoente \(4\) é a casca. A função
+                        \(3x^2 + 5\) é o recheio preso lá dentro.</div>
                 </div>
                 <div class="step-row is-accent">
                     <div class="step-formula">\[ \text{Derivada de Fora} = 4 \cdot (3x^2 + 5)^3 \]</div>
-                    <div class="step-text"><strong>Passo 2: Derivar a Casca.</strong> Damos o tombo no 4. O recheio nÃ£o
+                    <div class="step-text"><strong>Passo 2: Derivar a Casca.</strong> Damos o tombo no 4. O recheio não
                         muda! Fica intacto no parênteses. O expoente 4 cai para 3.</div>
                 </div>
                 <div class="step-row is-accent" style="background: rgba(149, 171, 146, 0.1);">
                     <div class="step-formula">\[ \text{Derivada de Dentro} = 6x \]</div>
                     <div class="step-text"><strong>Passo 3: Derivar o Recheio.</strong> Olhando só para o \(3x^2 + 5\).
-                        O 2 cai multiplicando o 3 (\(=6x\)). O 5 some porque ? constante. A derivada do recheio ?
+                        O 2 cai multiplicando o 3 (\(=6x\)). O 5 some porque é constante. A derivada do recheio é
                         \(6x\).</div>
                 </div>
                 <div class="step-row">
@@ -293,9 +292,9 @@
             <div class="reference-inline"></div>
 
             <h2>7. O Mundo das Ondas: Seno e Cosseno (Exemplo Inédito 4)</h2>
-            <p>Se vocÃª olhar as ondas de rádio, as ondas do mar, ou as batidas do seu coraÃ§Ã£o no hospital, tudo forma
-                gráficos em ondas. A matemÃ¡tica modela isso com Seno (\(\sin\)) e Cosseno (\(\cos\)). Derivar essas
-                funé?es Ã© a coisa mais fácil do mundo, ? um loop infinito:</p>
+            <p>Se você olhar as ondas de rádio, as ondas do mar, ou as batidas do seu coração no hospital, tudo forma
+                gráficos em ondas. A matemática modela isso com Seno (\(\sin\)) e Cosseno (\(\cos\)). Derivar essas
+                funções é a coisa mais fácil do mundo, é um loop infinito:</p>
 
             <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
                 <div class="obs" style="flex: 1; min-width: 250px; margin: 0;">
@@ -313,8 +312,8 @@
             </div>
 
             <div class="question-block" style="margin-top: 1.5rem;">
-                <h3 class="reference-related-title">Exemplo Passo a Passo: Mistura TrigonomÃ©trica</h3>
-                <p class="statement">Derive a funÃ§Ã£o \( f(x) = 7\sin(x) + 3\cos(x) - 4x \).</p>
+                <h3 class="reference-related-title">Exemplo Passo a Passo: Mistura Trigonométrica</h3>
+                <p class="statement">Derive a função \( f(x) = 7\sin(x) + 3\cos(x) - 4x \).</p>
             </div>
 
             <div class="solution-block">
@@ -326,24 +325,24 @@
                 <div class="step-row is-accent">
                     <div class="step-formula">\[ f'(x) = 7 \cdot (\cos(x)) + 3 \cdot (-\sin(x)) - 4 \]</div>
                     <div class="step-text"><strong>Passo 2: Aplicando a teoria.</strong> O \(\sin\) virou \(\cos\). O
-                        \(\cos\) virou \(-\sin\) (AtenÃ§Ã£o ao sinal!). O \(4x\) perdeu o \(x\) (Nossa velha Regra de
+                        \(\cos\) virou \(-\sin\) (Atenção ao sinal!). O \(4x\) perdeu o \(x\) (Nossa velha Regra de
                         Ouro).</div>
                 </div>
                 <div class="step-row">
                     <div class="step-formula">\[ f'(x) = 7\cos(x) - 3\sin(x) - 4 \]</div>
                     <div class="step-text"><strong>Passo 3: O Toque Final.</strong> O sinal negativo do Seno multiplicou
-                        o \(+3\), transformando ele em \(-3\). EstÃ¡ resolvido!</div>
+                        o \(+3\), transformando ele em \(-3\). Está resolvido!</div>
                 </div>
             </div>
 
             <div class="reference-inline"></div>
 
-            <h2>ResumÃ£o de Mestre para Colar na Parede</h2>
+            <h2>Resumão de Mestre para Colar na Parede</h2>
             <ul class="lista">
-                <li><strong>PolinÃ´mios (Tombo):</strong> Derruba multiplicando, tira 1 l? de cima.</li>
-                <li><strong>Letra ou NÃºmero isolados:</strong> Letra perde o expoente, número sozinho vira ZERO.</li>
-                <li><strong>RaÃ­zes:</strong> Esconda como expoente \(1/2\) e dÃ© o tombo.</li>
-                <li><strong>FraÃ§Ãµes:</strong> Jogue o \(x\) para cima mudando o sinal do expoente.</li>
+                <li><strong>Polinômios (Tombo):</strong> Derruba multiplicando, tira 1 lá de cima.</li>
+                <li><strong>Letra ou Número isolados:</strong> Letra perde o expoente, número sozinho vira ZERO.</li>
+                <li><strong>Raízes:</strong> Esconda como expoente \(1/2\) e dê o tombo.</li>
+                <li><strong>Frações:</strong> Jogue o \(x\) para cima mudando o sinal do expoente.</li>
                 <li><strong>Casca grossa (Cadeia):</strong> Deriva fora, copia dentro, multiplica pela derivada de
                     dentro.</li>
                 <li><strong>Trigonometria:</strong> \(\sin \to \cos\), e \(\cos \to -\sin\).</li>
@@ -358,3 +357,7 @@
 </body>
 
 </html>
+
+
+
+

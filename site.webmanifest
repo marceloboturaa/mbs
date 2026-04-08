@@ -1,9 +1,9 @@
 {
   "name": "Na Matemática",
   "short_name": "Na Mat.",
-  "id": "/mbs/",
-  "start_url": "/mbs/index.html",
-  "scope": "/mbs/",
+  "id": "./",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#fcfbf7",
   "theme_color": "#181818",

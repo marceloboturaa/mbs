@@ -372,6 +372,67 @@ h2 {
   text-decoration: none;
 }
 
+.search-tools {
+  margin-top: 1rem;
+}
+
+.search-panel {
+  width: 100%;
+}
+
+.search-panel input {
+  width: 100%;
+}
+
+.search-panel .exercise-search-icon {
+  color: #7f907b;
+}
+
+.search-result-snippet {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.search-result-snippet mjx-container {
+  display: inline-block !important;
+  margin: 0 0.12rem !important;
+  vertical-align: -0.08em;
+}
+
+.search-result-snippet mjx-container[jax="CHTML"] {
+  font-size: 0.98rem !important;
+}
+
+.search-result-item {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: transform 180ms ease;
+  animation: search-result-settle 320ms ease forwards;
+}
+
+.search-result-item:hover,
+.search-result-item:focus-visible {
+  transform: translateY(-2px);
+}
+
+.search-result-item .exercise-icon {
+  align-self: center;
+}
+
+@keyframes search-result-settle {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .exercise-item:hover .exercise-icon,
 .exercise-item:focus-visible .exercise-icon {
   transform: translate(2px, -2px);

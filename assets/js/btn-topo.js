@@ -1,6 +1,55 @@
 document.addEventListener("DOMContentLoaded", function () {
   var button = document.querySelector(".btn-topo");
 
+  function getCurrentSection(pathname) {
+    var path = String(pathname || "").toLowerCase();
+
+    if (path.indexOf("/busca.html") !== -1) {
+      return "busca";
+    }
+
+    if (path.indexOf("/exercicios.html") !== -1 || path.indexOf("/buscador-resolucoes.html") !== -1) {
+      return "exercicios";
+    }
+
+    if (path.indexOf("/notas-de-aula/") !== -1 || path.indexOf("/notas-de-aula.html") !== -1) {
+      return "resumos";
+    }
+
+    if (path.indexOf("/resumos/") !== -1 || path.indexOf("/resumos-livros") !== -1) {
+      return "resumos";
+    }
+
+    return "inicio";
+  }
+
+  function enhanceSiteNav() {
+    var nav = document.querySelector(".site-nav");
+    var basePath = "/mbs/";
+    var currentSection;
+    var links;
+    var markup;
+
+    if (!nav) {
+      return;
+    }
+
+    currentSection = getCurrentSection(window.location.pathname);
+    links = [
+      { key: "inicio", label: "In&iacute;cio", href: basePath + "index.html" },
+      { key: "busca", label: "Busca", href: basePath + "busca.html" },
+      { key: "exercicios", label: "Exerc&iacute;cios", href: basePath + "exercicios.html" },
+      { key: "resumos", label: "Resumos", href: basePath + "resumos/index.html" }
+    ];
+
+    markup = links.map(function (item) {
+      var className = item.key === currentSection ? "nav-link is-current" : "nav-link";
+      return '<a class="' + className + '" href="' + item.href + '">' + item.label + "</a>";
+    }).join("");
+
+    nav.innerHTML = markup;
+  }
+
   function ensureTopAnchor() {
     if (!document.getElementById("top") && document.body) {
       document.body.id = "top";
@@ -24,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   ensureTopAnchor();
+  enhanceSiteNav();
 
   if (!button) {
     button = document.createElement("a");
