@@ -3,6 +3,7 @@
   var resultsContainer = document.getElementById("global-results");
   var emptyState = document.getElementById("global-empty");
   var searchIndex = [];
+  var siteBase = window.location.pathname.indexOf("/mbs/") === 0 ? "/mbs/" : "/";
 
   function repairMojibake(value) {
     var text = String(value || "");
@@ -88,11 +89,15 @@
     var value = String(url || "");
 
     if (value === "/mbs/notas-de-aula/index.html") {
-      return "/mbs/resumos/index.html";
+      return siteBase + "resumos/index.html";
     }
 
     if (value === "/mbs/notas-de-aula/calculo-3/calculo-3-aula-16-marco.html") {
-      return "/mbs/resumos/derivada/calculo-3-aula-16-marco.html";
+      return siteBase + "resumos/derivada/calculo-3-aula-16-marco.html";
+    }
+
+    if (value.indexOf("/mbs/") === 0) {
+      return siteBase + value.slice("/mbs/".length);
     }
 
     return value;
@@ -281,7 +286,7 @@
 
   hydrateQueryFromUrl();
 
-  fetch("/mbs/search-index.json")
+  fetch(siteBase + "search-index.json")
     .then(function (response) {
       if (!response.ok) {
         throw new Error("Falha ao carregar o índice de busca.");
