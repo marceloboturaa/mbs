@@ -1,0 +1,21 @@
+{
+  "name": "Marcelo Botura Souza",
+  "short_name": "MBS",
+  "start_url": "/mbs/index.html",
+  "scope": "/mbs/",
+  "display": "standalone",
+  "background_color": "#fcfbf7",
+  "theme_color": "#181818",
+  "icons": [
+    {
+      "src": "/mbs/assets/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/mbs/assets/icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
