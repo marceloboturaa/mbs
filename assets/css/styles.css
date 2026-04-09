@@ -1302,6 +1302,11 @@ body.note-page .page {
 }
 
 @media (max-width: 640px) {
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
   .btn-topo {
     right: max(0.75rem, env(safe-area-inset-right));
     bottom: max(0.75rem, env(safe-area-inset-bottom));
@@ -1312,13 +1317,18 @@ body.note-page .page {
   }
 
   body.note-page .page {
-    width: calc(100% - 0.9rem);
+    width: calc(100% - 2rem);
   }
 
   .page {
-    width: calc(100% - 0.9rem);
+    width: calc(100% - 2rem);
     min-height: 100dvh;
     padding-top: 0.6rem;
+  }
+
+  .note-page .paper {
+    width: 100%;
+    padding: 0 0.35rem 1.25rem;
   }
 
   h1 {
@@ -1362,6 +1372,25 @@ body.note-page .page {
     padding: 0 0 0.7rem;
   }
 
+  .question-block,
+  .solution-block,
+  .reference-inline,
+  .exercise-list,
+  .exercise-empty,
+  .note-page .lista,
+  .note-page .equation {
+    padding-inline: 0.15rem;
+  }
+
+  .note-page .exemplo-bloco,
+  .note-page .obs,
+  .note-page .grafico-container,
+  .conceito-box,
+  .dimensao-svg {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .search-panel {
     width: 100%;
   }
@@ -1373,6 +1402,10 @@ body.note-page .page {
   .step-row {
     grid-template-columns: 1fr;
     gap: 0.35rem;
+  }
+
+  .step-formula {
+    padding-right: 0.1rem;
   }
 
   .step-text {
@@ -1391,7 +1424,7 @@ body.note-page .page {
   .hero-home {
     min-height: calc(100dvh - 9.25rem);
     align-items: flex-end;
-    padding: 1.2rem 0.2rem 0.15rem;
+    padding: 1.2rem 0.35rem 0.15rem;
   }
 
   .home-warning {

@@ -33,18 +33,23 @@ document.addEventListener("DOMContentLoaded", function () {
   function applyEnvironmentFavicon() {
     var host = String(window.location.hostname || "").toLowerCase();
     var basePath = getBasePath();
+    var isLocalhost = host === "localhost" || host === "127.0.0.1";
+    var internalPage = isInternalPage(window.location.pathname);
     var flavor = "blue";
     var faviconHref = basePath + "icons/favicon-azul.svg?v=blue";
     var iconLinks = Array.prototype.slice.call(document.querySelectorAll('link[rel~="icon"]'));
 
-    if (host === "localhost" || host === "127.0.0.1") {
-      if (isInternalPage(window.location.pathname)) {
+    if (isLocalhost) {
+      if (internalPage) {
         flavor = "green";
         faviconHref = basePath + "icons/favicon-verde.svg?v=green";
       } else {
         flavor = "orange";
         faviconHref = basePath + "icons/favicon-laranja.svg?v=orange";
       }
+    } else if (internalPage) {
+      flavor = "purple";
+      faviconHref = basePath + "icons/favicon-roxo.svg?v=purple";
     }
 
     if (!iconLinks.length) {
