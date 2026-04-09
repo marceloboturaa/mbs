@@ -20,15 +20,15 @@
     window.MathJax = { tex: { inlineMath: [["\\(", "\\)"],["$", "$"]], displayMath: [["\\[", "\\]"],["$$", "$$"]] } };
   </script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/main.js?v=20260408"></script>
   <link rel="icon" href="icons/favicon.ico" sizes="any">
   <link rel="icon" type="image/svg+xml" href="icons/favicon-azul.svg">
   <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
   <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#fcfbf7" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#181818" media="(prefers-color-scheme: dark)">
-  <meta name="msapplication-TileColor" content="#fcfbf7"></head>
+  <meta name="theme-color" content="#f4f5f7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1f2328" media="(prefers-color-scheme: dark)">
+  <meta name="msapplication-TileColor" content="#f4f5f7"></head>
 <body id="top">
   <main class="page">
     <nav class="site-nav" aria-label="Menu principal">
@@ -39,23 +39,19 @@
 
     <header class="hero hero-compact">
       <div class="exercise-tools">
-        <div class="filter-board" aria-label="Filtros de exercícios">
-          <section class="filter-group">
-            <div class="filter-group-head">
-              <span>Páginas</span>
+        <div class="exercise-filters">
+          <div class="exercise-filter-field">
+            <span>Filtrar por página | Zill & Cullen </span>
+            <div class="exercise-filter-box">
+              <select id="exercise-page-filter">
+                <option value="">Todas as páginas</option>
+              </select>
+              <button class="filter-reset filter-reset-inline" id="filter-reset" type="button">Limpar</button>
             </div>
-            <div id="page-filter" class="filter-chip-list"></div>
-          </section>
-          <section class="filter-group">
-            <div class="filter-group-head">
-              <span>Capítulos</span>
-            </div>
-            <div id="chapter-filter" class="filter-chip-list"></div>
-          </section>
+          </div>
         </div>
         <div class="filter-footer">
           <p class="filter-status" id="filter-status" aria-live="polite"></p>
-          <button class="filter-reset" id="filter-reset" type="button">Limpar filtros</button>
         </div>
       </div>
     </header>
@@ -174,7 +170,7 @@
       </a>
     </section>
 
-    <p class="exercise-empty" id="exercise-empty" hidden>Nenhum exercício encontrado para esses filtros.</p>
+    <p class="exercise-empty" id="exercise-empty" hidden>Nenhum exercício encontrado para essa página ou exercício.</p>
 
     <footer class="site-footer"><p>@sabormatematica | 2026</p> 
     </footer>

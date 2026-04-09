@@ -1,4 +1,4 @@
-﻿document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
   var searchInput = document.getElementById("global-search");
   var resultsContainer = document.getElementById("global-results");
   var emptyState = document.getElementById("global-empty");

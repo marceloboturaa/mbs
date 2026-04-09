@@ -1,140 +1,97 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var pageFilter = document.getElementById("page-filter");
-  var chapterFilter = document.getElementById("chapter-filter");
+  var pageFilter = document.getElementById("exercise-page-filter");
   var filterStatus = document.getElementById("filter-status");
   var filterReset = document.getElementById("filter-reset");
   var exerciseItems = Array.prototype.slice.call(document.querySelectorAll("[data-exercise-item]"));
   var emptyState = document.getElementById("exercise-empty");
-  var state = {
-    page: "",
-    chapter: ""
-  };
-  var facets;
+  var index = [];
+  var pages = [];
 
-  function normalizeSearchText(value) {
+  function normalizeText(value) {
     return String(value || "")
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "")
       .toLowerCase()
+      .replace(/\s+/g, " ")
       .trim();
   }
 
   function parseItemMeta(item) {
     var metaLine = item.querySelector(".exercise-meta-line");
-    var text = normalizeSearchText(metaLine ? metaLine.textContent : "");
-    var pageMatch = text.match(/pagina\s+(\d+)/);
-    var chapterMatch = text.match(/cap\.?\s*([0-9.]+)/);
+    var text = normalizeText(metaLine ? metaLine.textContent : item.textContent || "");
+    var pageMatch = text.match(/\bp(?:agina)?\s*(\d+)\b/);
 
     return {
-      page: pageMatch ? pageMatch[1] : "",
-      chapter: chapterMatch ? chapterMatch[1] : ""
+      page: pageMatch ? pageMatch[1] : ""
     };
   }
 
-  function collectFacets() {
-    var pages = new Map();
-    var chapters = new Map();
+  function collectIndex() {
+    var pageSet = new Set();
 
     exerciseItems.forEach(function (item) {
       var meta = parseItemMeta(item);
 
       item.dataset.page = meta.page;
-      item.dataset.chapter = meta.chapter;
 
-      if (meta.page && !pages.has(meta.page)) {
-        pages.set(meta.page, "Página " + meta.page);
+      if (meta.page) {
+        pageSet.add(meta.page);
       }
 
-      if (meta.chapter && !chapters.has(meta.chapter)) {
-        chapters.set(meta.chapter, "Cap. " + meta.chapter);
-      }
+      index.push({
+        item: item,
+        page: meta.page
+      });
     });
 
-    facets = {
-      pages: Array.from(pages.keys()).sort(function (a, b) {
-        return Number(a) - Number(b);
-      }),
-      chapters: Array.from(chapters.keys()).sort(function (a, b) {
-        var left = a.split(".").map(Number);
-        var right = b.split(".").map(Number);
-        var length = Math.max(left.length, right.length);
-        var i;
+    pages = Array.from(pageSet).sort(function (a, b) {
+      return Number(a) - Number(b);
+    });
+  }
 
-        for (i = 0; i < length; i += 1) {
-          if ((left[i] || 0) !== (right[i] || 0)) {
-            return (left[i] || 0) - (right[i] || 0);
-          }
-        }
+  function populatePageFilter(selectedPage) {
+    var currentValue = selectedPage || "";
+    var fragment = document.createDocumentFragment();
+    var option = document.createElement("option");
 
-        return 0;
-      })
+    option.value = "";
+    option.textContent = "Todas as páginas";
+    fragment.appendChild(option);
+
+    pages.forEach(function (page) {
+      var item = document.createElement("option");
+
+      item.value = page;
+      item.textContent = "Página " + page;
+      fragment.appendChild(item);
+    });
+
+    pageFilter.innerHTML = "";
+    pageFilter.appendChild(fragment);
+    pageFilter.value = pages.indexOf(currentValue) !== -1 ? currentValue : "";
+  }
+
+  function getQuery() {
+    return {
+      page: pageFilter ? pageFilter.value : ""
     };
   }
 
-  function countItemsFor(page, chapter) {
-    var count = 0;
+  function matchesItem(entry, query) {
+    if (query.page && entry.page !== query.page) {
+      return false;
+    }
 
-    exerciseItems.forEach(function (item) {
-      var itemPage = item.dataset.page || "";
-      var itemChapter = item.dataset.chapter || "";
-      var matchesPage = !page || itemPage === page;
-      var matchesChapter = !chapter || itemChapter === chapter;
-
-      if (matchesPage && matchesChapter) {
-        count += 1;
-      }
-    });
-
-    return count;
+    return true;
   }
 
-  function createChip(label, value, count, active, onClick) {
-    var button = document.createElement("button");
-
-    button.type = "button";
-    button.className = active ? "filter-chip is-active" : "filter-chip";
-    button.setAttribute("aria-pressed", active ? "true" : "false");
-    button.dataset.value = value;
-    button.innerHTML = "<span>" + label + "</span><strong>" + count + "</strong>";
-    button.addEventListener("click", function () {
-      onClick(value);
-    });
-
-    return button;
-  }
-
-  function renderFacetGroup(container, kind, values, activeValue, otherValue) {
-    var fragment = document.createDocumentFragment();
-    var allCount = countItemsFor(kind === "page" ? "" : otherValue, kind === "page" ? otherValue : "");
-    var allButton = createChip("Todos", "", allCount, activeValue === "", function () {
-      state[kind] = "";
-      applyFilters();
-    });
-
-    fragment.appendChild(allButton);
-
-    values.forEach(function (value) {
-      var label = kind === "page" ? "Página " + value : "Cap. " + value;
-      var count = kind === "page" ? countItemsFor(value, otherValue) : countItemsFor(otherValue, value);
-      var chip = createChip(label, value, count, activeValue === value, function (clickedValue) {
-        state[kind] = state[kind] === clickedValue ? "" : clickedValue;
-        applyFilters();
-      });
-
-      fragment.appendChild(chip);
-    });
-
-    container.innerHTML = "";
-    container.appendChild(fragment);
-  }
-
-  function updateStatus(visibleCount) {
+  function updateStatus(visibleCount, query) {
     if (!filterStatus) {
       return;
     }
 
-    if (!state.page && !state.chapter) {
-      filterStatus.textContent = "Mostrando todos os exercícios.";
+    if (!query.page) {
+      filterStatus.textContent = "";
       return;
     }
 
@@ -142,78 +99,81 @@ document.addEventListener("DOMContentLoaded", function () {
       visibleCount +
       " exercício" +
       (visibleCount === 1 ? "" : "s") +
-      " · " +
-      (state.page ? "Página " + state.page : "todas as páginas") +
-      " · " +
-      (state.chapter ? "Cap. " + state.chapter : "todos os capítulos");
+      " encontrado" +
+      (visibleCount === 1 ? "" : "s") +
+      " · Página " +
+      query.page;
   }
 
-  function syncUrl() {
+  function syncUrl(query) {
     var params = new URLSearchParams(window.location.search);
 
-    if (state.page) {
-      params.set("page", state.page);
+    if (query.page) {
+      params.set("page", query.page);
     } else {
       params.delete("page");
-    }
-
-    if (state.chapter) {
-      params.set("chapter", state.chapter);
-    } else {
-      params.delete("chapter");
     }
 
     window.history.replaceState({}, "", window.location.pathname + (params.toString() ? "?" + params.toString() : ""));
   }
 
   function applyFilters() {
+    var query = getQuery();
     var visibleCount = 0;
 
-    exerciseItems.forEach(function (item) {
-      var matchesPage = !state.page || item.dataset.page === state.page;
-      var matchesChapter = !state.chapter || item.dataset.chapter === state.chapter;
-      var matches = matchesPage && matchesChapter;
+    index.forEach(function (entry) {
+      var matches = matchesItem(entry, query);
 
-      item.style.display = matches ? "" : "none";
+      entry.item.style.display = matches ? "" : "none";
 
       if (matches) {
         visibleCount += 1;
       }
     });
 
-    renderFacetGroup(pageFilter, "page", facets.pages, state.page, state.chapter);
-    renderFacetGroup(chapterFilter, "chapter", facets.chapters, state.chapter, state.page);
-    updateStatus(visibleCount);
+    updateStatus(visibleCount, query);
 
     if (emptyState) {
       emptyState.hidden = visibleCount !== 0;
     }
 
     if (filterReset) {
-      filterReset.disabled = !state.page && !state.chapter;
+      filterReset.disabled = !query.page;
     }
 
-    syncUrl();
+    syncUrl(query);
   }
 
-  function hydrateStateFromUrl() {
+  function hydrateFromUrl() {
     var params = new URLSearchParams(window.location.search);
-    state.page = params.get("page") || "";
-    state.chapter = params.get("chapter") || "";
+    var page = params.get("page") || "";
+
+    if (pageFilter) {
+      pageFilter.value = page;
+    }
   }
 
-  if (!exerciseItems.length || !pageFilter || !chapterFilter) {
+  if (!exerciseItems.length || !pageFilter) {
     return;
   }
 
-  collectFacets();
-  hydrateStateFromUrl();
+  collectIndex();
+  hydrateFromUrl();
+  populatePageFilter(pageFilter.value);
+
+  pageFilter.addEventListener("change", function () {
+    applyFilters();
+  });
+
+  pageFilter.addEventListener("input", function () {
+    applyFilters();
+  });
 
   if (filterReset) {
     filterReset.addEventListener("click", function () {
-      state.page = "";
-      state.chapter = "";
+      pageFilter.value = "";
       applyFilters();
+      pageFilter.focus();
     });
   }
 
