@@ -1317,18 +1317,18 @@ body.note-page .page {
   }
 
   body.note-page .page {
-    width: calc(100% - 2rem);
+    width: calc(100% - 2.6rem);
   }
 
   .page {
-    width: calc(100% - 2rem);
+    width: calc(100% - 2.6rem);
     min-height: 100dvh;
     padding-top: 0.6rem;
   }
 
   .note-page .paper {
     width: 100%;
-    padding: 0 0.35rem 1.25rem;
+    padding: 0 0.5rem 1.25rem;
   }
 
   h1 {
@@ -1379,7 +1379,7 @@ body.note-page .page {
   .exercise-empty,
   .note-page .lista,
   .note-page .equation {
-    padding-inline: 0.15rem;
+    padding-inline: 0.3rem;
   }
 
   .note-page .exemplo-bloco,
