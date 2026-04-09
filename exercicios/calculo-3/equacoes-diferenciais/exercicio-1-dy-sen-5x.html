@@ -40,14 +40,13 @@
       <p class="eyebrow">Resolu&ccedil;&atilde;o</p>
     </header>
 
-    <div class="exercise-actions"><button class="print-button" type="button" onclick="window.print()">Imprimir</button></div>
+    <nav class="exercise-nav" aria-label="Navegação entre exercícios">
+  <span class="exercise-nav-link is-disabled exercise-nav-prev" aria-hidden="true"><strong class="exercise-nav-title">Início da lista</strong><span class="exercise-nav-meta"></span></span>
+  <a class="exercise-nav-link exercise-nav-list" href="../../../exercicios.html" aria-label="Voltar ao índice de exercícios"><strong class="exercise-nav-title">Índice de exercícios</strong><span class="exercise-nav-meta">Voltar à lista</span></a>
+  <a class="exercise-nav-link exercise-nav-next" href="exercicio-2-dy-x-1-ao-quadrado.html" rel="next"><strong class="exercise-nav-title">Cap. 2.2</strong><span class="exercise-nav-meta">Exercício 2</span></a>
+<button class="print-button" type="button" onclick="window.print()">Imprimir</button></nav>
+
     <section class="exercise-card">
-      <div class="exercise-meta">
-        <span>P&aacute;gina 51</span>
-        <span>Cap. 2.2</span>
-        <span>Exerc&iacute;cio 1</span>
-        <span>Equa&ccedil;&atilde;o diferencial</span>
-      </div>
       <section class="question-block">
         <p class="statement">Resolver a equa&ccedil;&atilde;o diferencial \(\dfrac{dy}{dx}=\sin 5x\).</p>
       </section>
@@ -56,7 +55,6 @@
           <div class="step-formula">\[ \frac{dy}{dx}=\sin 5x \;\Longrightarrow\; dy=\sin 5x\,dx \]</div>
           <div class="step-text">Colocamos a equa&ccedil;&atilde;o na forma diferencial para integrar os dois lados.</div>
         </div>
-
         <div class="step-row">
           <div class="step-formula">\[\int dy=\int \sin 5x\,dx\]</div>
           <div class="step-text">Integramos ambos os lados da equa&ccedil;&atilde;o.</div>
@@ -76,19 +74,32 @@
           <div class="step-formula">\[\frac{1}{5}\int \sin u\,du=-\frac{1}{5}\cos u + C\]</div>
           <div class="step-text">Integramos \(\sin u\) e voltamos para a vari&aacute;vel original.</div>
         </div>
-
         <div class="step-row">
           <div class="step-formula">\[y=-\frac{1}{5}\cos 5x + C\]\[\boxed{y=-\frac{1}{5}\cos 5x + C}\]</div>
           <div class="step-text">Acrescentamos a constante de integra&ccedil;&atilde;o e obtemos a solu&ccedil;&atilde;o geral.</div>
         </div>
         <div class="solution-end" aria-label="Fim da resolu&ccedil;&atilde;o">&#8718;</div>
         <p class="solution-credit">resolu&ccedil;&atilde;o de Marcelo Botura</p>
+      <section class="reference-inline">
+        <p>
+          ZILL, Dennis G.; CULLEN, Michael R. <em>Equações Diferenciais, volume 1</em>.
+          Tradução Antonio Zumpano; revisão técnica Antonio Pertence Jr. São Paulo: Pearson Makron Books, 2001.
+          Título original: <em>Differential Equations with Boundary-Value Problems</em>, 3rd edition.
+        </p>
+      </section>
       </section>
     </section>
     <footer class="site-footer"><p>@sabormatematica | 2026</p></footer>
   </main>
-<script defer src="../../../assets/js/btn-topo.js"></script></body>
+<script defer src="../../../assets/js/btn-topo.js?v=20260408"></script></body>
 </html>
+
+
+
+
+
+
+
 
 
 
