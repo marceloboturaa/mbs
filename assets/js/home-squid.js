@@ -3,17 +3,71 @@ document.addEventListener("DOMContentLoaded", function () {
   var quoteText = document.querySelector(".js-home-quote-text");
   var warningText = document.querySelector(".js-home-warning-text");
   var quotes = [
-    "Me sinto a fração mais irrelevante desse sistema, o último da fila. Mas fiquem vendo: vou simplificar minhas falhas, elevar meu esforço ao quadrado e terminar o ano como o número inteiro que ninguém esperava que eu fosse.",
-    "Hoje eu sou o conjunto vazio da sala, aquele que olha e não entende nada. Mas a matemática ensina que todo gráfico começa na origem. Posso ser o menor valor agora, mas minha derivada é positiva e meu crescimento vai ser absurdo.",
-    "Podem me rotular como o menor dos catetos hoje, mas este ano eu me torno a hipotenusa. Vou ser maior que a soma de qualquer dúvida que lançarem sobre mim.",
-    "Minha inteligência hoje pode parecer uma função constante, mas minha vontade de aprender é uma exponencial. O mundo que se prepare para o meu ponto de inflexão.",
-    "Sim, eu me sinto o mais burro quando olho pro quadro. Mas minha mente está saindo do erro para a precisão absoluta. O pior da sala hoje é só o rascunho de alguém que aprendeu a vencer amanhã.",
-    "Podem me chamar de burro, eu mesmo me sinto assim quando olho pro quadro. Mas a minha mente está saindo do limite de erro para buscar a precisão absoluta. O pior da sala hoje é só o rascunho da minha melhor versão que vou calcular amanhã.",
-    "Hoje eu sou o atraso da turma, o mais enrolado com os números. Mas a vida não é uma constante, é uma progressão. Posso começar no negativo, mas minha soma diária vai me levar onde ninguém acredita que eu chego.",
-    "Eu aceito: hoje sou o mais burro da sala, aquele que se perde em qualquer conta básica. Mas o erro é apenas uma variável de ajuste. Vou errar até aprender, e aprender até o meu resultado ser incontestável.",
-    "Olho pro quadro e só vejo caos, me sinto o zero à esquerda da classe. Mas até a equação mais complexa começa com alguém que não entende nada. Estou saindo do ponto de inércia para virar a maior surpresa desse ano.",
-    "Posso ser o mais enrolado e lento hoje, aquele que todo mundo subestima. Mas estou fazendo o cálculo da minha virada. O tempo que eu perco tentando entender agora é o investimento pra eu nunca mais esquecer depois.",
-    "O rótulo de 'pior da sala' eu já tenho. Agora só me resta o trabalho duro para provar que a minha inteligência é uma função crescente, e o meu limite é o topo."
+    "A matemática é a linguagem com a qual Deus escreveu o universo. (Galileo Galilei)",
+
+"A matemática é a rainha das ciências, e a teoria dos números é a rainha da matemática. (Carl Friedrich Gauss)",
+
+"Não existem ramos da matemática, apenas diferentes pontos de vista sobre o mesmo objeto. (Henri Poincaré)",
+
+"A essência da matemática está na sua liberdade. (Georg Cantor)",
+
+"Deus não joga dados com o universo. (Albert Einstein)",
+
+"A matemática pura é, à sua maneira, a poesia das ideias lógicas. (Albert Einstein)",
+
+"A matemática não mente; quem mente são os matemáticos. (Carl Friedrich Gauss)",
+
+"A prova de um matemático é como uma pintura ou um poema — ideias devem se encaixar de maneira harmoniosa. (G. H. Hardy)",
+
+"Se eu vi mais longe, foi por estar sobre os ombros de gigantes. (Isaac Newton)",
+
+"A matemática revela seus segredos apenas àqueles que a abordam com amor. (Archimedes)",
+
+"A beleza é o primeiro teste: não há lugar permanente no mundo para a matemática feia.(G. H. Hardy)",
+
+"A matemática é o alfabeto com o qual Deus escreveu o mundo. (Galileo Galilei)",
+
+"Um matemático é uma máquina que transforma café em teoremas. (Paul Erdős)",
+
+"Não podemos resolver nossos problemas com o mesmo pensamento que usamos quando os criamos. (Albert Einstein)",
+
+"A matemática é a ciência dos padrões. (Keith Devlin)",
+
+"Na matemática, você não entende as coisas. Você simplesmente se acostuma com elas (John von Neumann)",
+
+"A matemática é a arte de dar o mesmo nome a coisas diferentes. (Henri Poincaré)",
+
+"A matemática é o mais poderoso e belo instrumento da mente humana. (Stefan Banach)",
+
+"A matemática começa onde termina o bom senso. (Bertrand Russell)",
+
+"A matemática é a música da razão. (James Joseph Sylvester)",
+
+"A matemática é o lugar onde você pode fazer coisas que não pode fazer no mundo real. (Marcus du Sautoy)",
+
+"Os números governam o mundo. (Pitágoras)",
+
+"A matemática é infinita como o próprio pensamento humano. (David Hilbert)",
+
+"Devemos saber. Saberemos. (David Hilbert)",
+
+"A matemática não é sobre números, equações, cálculos ou algoritmos: é sobre entendimento. (William Paul Thurston)",
+
+"A descoberta matemática é uma viagem, não um destino. (Terence Tao)",
+
+"A matemática é a chave e a porta para as ciências. (Roger Bacon)",
+
+"A matemática é o tribunal final do pensamento. (Charles Sanders Peirce)",
+
+"A matemática é a ciência que tira conclusões necessárias. (Benjamin Peirce)",
+
+"A matemática é a mais segura das ciências, porque suas provas são baseadas na razão pura.(René Descartes)",
+
+"A matemática é a base de todo conhecimento exato. (Leonhard Euler)",
+
+"A matemática é o espelho da mente humana. (Richard Courant)",
+
+"A matemática é a ciência da ordem e da medida. (Aristóteles)"
   ];
   var warningMessage = "Se não estudar, o bicho da DP aparece sem avisar.";
 
