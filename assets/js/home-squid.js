@@ -3,72 +3,85 @@ document.addEventListener("DOMContentLoaded", function () {
   var quoteText = document.querySelector(".js-home-quote-text");
   var warningText = document.querySelector(".js-home-warning-text");
   var quotes = [
-    "A matemática é a linguagem com a qual Deus escreveu o universo. (Galileo Galilei)",
+  "A matemática é a linguagem com a qual Deus escreveu o universo. (Galileo Galilei)",
+  "A matemática é a rainha das ciências, e a teoria dos números é a rainha da matemática. (Carl Friedrich Gauss)",
+  "Não existem ramos da matemática, apenas diferentes pontos de vista sobre o mesmo objeto. (Henri Poincaré)",
+  "A essência da matemática está na sua liberdade. (Georg Cantor)",
+  "Deus não joga dados com o universo. (Albert Einstein)",
+  "A matemática pura é, à sua maneira, a poesia das ideias lógicas. (Albert Einstein)",
+  "A matemática não mente; quem mente são os matemáticos. (Carl Friedrich Gauss)",
+  "A prova de um matemático é como uma pintura ou um poema: ideias devem se encaixar de maneira harmoniosa. (G. H. Hardy)",
+  "Se eu vi mais longe, foi por estar sobre os ombros de gigantes. (Isaac Newton)",
+  "A matemática revela seus segredos apenas àqueles que a abordam com amor. (Arquimedes)",
+  "A beleza é o primeiro teste: não há lugar permanente no mundo para a matemática feia. (G. H. Hardy)",
+  "A matemática é o alfabeto com o qual Deus escreveu o mundo. (Galileo Galilei)",
+  "Um matemático é uma máquina que transforma café em teoremas. (Paul Erdős)",
+  "Não podemos resolver nossos problemas com o mesmo pensamento que usamos quando os criamos. (Albert Einstein)",
+  "A matemática é a ciência dos padrões. (Keith Devlin)",
+  "Na matemática, você não entende as coisas. Você simplesmente se acostuma com elas. (John von Neumann)",
+  "A matemática é a arte de dar o mesmo nome a coisas diferentes. (Henri Poincaré)",
+  "A matemática é o mais poderoso e belo instrumento da mente humana. (Stefan Banach)",
+  "A matemática começa onde termina o bom senso. (Bertrand Russell)",
+  "A matemática é a música da razão. (James Joseph Sylvester)",
+  "A matemática é o lugar onde você pode fazer coisas que não pode fazer no mundo real. (Marcus du Sautoy)",
+  "Os números governam o mundo. (Pitágoras)",
+  "A matemática é infinita como o próprio pensamento humano. (David Hilbert)",
+  "Devemos saber. Saberemos. (David Hilbert)",
+  "A matemática não é sobre números, equações, cálculos ou algoritmos: é sobre entendimento. (William Paul Thurston)",
+  "A descoberta matemática é uma viagem, não um destino. (Terence Tao)",
+  "A matemática é a chave e a porta para as ciências. (Roger Bacon)",
+  "A matemática é o tribunal final do pensamento. (Charles Sanders Peirce)",
+  "A matemática é a ciência que tira conclusões necessárias. (Benjamin Peirce)",
+  "A matemática é a mais segura das ciências, porque suas provas são baseadas na razão pura. (René Descartes)",
+  "A matemática é a base de todo conhecimento exato. (Leonhard Euler)",
+  "A matemática é o espelho da mente humana. (Richard Courant)",
+  "A matemática é a ciência da ordem e da medida. (Aristóteles)",
+  "A matemática é a ciência que mede o mundo. (Galileo Galilei)",
+  "A matemática é indispensável para compreender a natureza. (Isaac Newton)",
+  "A matemática é o estudo das estruturas abstratas. (Emmy Noether)",
+  "A matemática é a ciência da dedução lógica. (Alfred North Whitehead)",
+  "A matemática é o instrumento mais poderoso que possuímos para entender o universo. (Stephen Hawking)",
+  "A matemática é a arte de raciocinar corretamente. (George Boole)",
+  "A matemática é a linguagem do pensamento lógico. (Gottlob Frege)",
+  "A matemática é a base da ciência moderna. (René Descartes)",
+  "A matemática é a forma mais rigorosa de pensamento. (David Hilbert)",
+  "A matemática é essencial para o progresso humano. (John von Neumann)",
+  "A matemática é a ciência das quantidades e das formas. (Euclides)",
+  "A matemática é o caminho para a verdade universal. (Baruch Spinoza)",
+  "A matemática é o estudo da ordem e da estrutura. (Nicolas Bourbaki)",
+  "A matemática é o fundamento da engenharia e da física. (James Clerk Maxwell)",
+  "A matemática é a ciência que revela padrões ocultos. (Benoit Mandelbrot)",
+  "A matemática é a ferramenta mais precisa da razão humana. (Pierre-Simon Laplace)",
+  "A matemática é a ciência que transforma ideias em certezas. (Henri Lebesgue)",
+  "A matemática é uma criação do espírito humano. (Henri Poincaré)",
+  "A matemática é o instrumento mais poderoso para a compreensão da realidade. (Joseph Fourier)",
+  "A matemática é a ciência das leis necessárias. (Immanuel Kant)",
+  "A matemática é uma aventura da mente humana. (Richard Courant)",
+  "A matemática é a ferramenta essencial da física. (Paul Dirac)",
+  "A matemática é a arte de pensar com rigor. (George Pólya)",
+  "A matemática é a ciência das ideias claras e distintas. (René Descartes)",
+  "A matemática é o estudo da verdade. (Augustus De Morgan)",
+  "A matemática é a expressão mais pura do pensamento humano. (Kurt Gödel)",
 
-"A matemática é a rainha das ciências, e a teoria dos números é a rainha da matemática. (Carl Friedrich Gauss)",
-
-"Não existem ramos da matemática, apenas diferentes pontos de vista sobre o mesmo objeto. (Henri Poincaré)",
-
-"A essência da matemática está na sua liberdade. (Georg Cantor)",
-
-"Deus não joga dados com o universo. (Albert Einstein)",
-
-"A matemática pura é, à sua maneira, a poesia das ideias lógicas. (Albert Einstein)",
-
-"A matemática não mente; quem mente são os matemáticos. (Carl Friedrich Gauss)",
-
-"A prova de um matemático é como uma pintura ou um poema — ideias devem se encaixar de maneira harmoniosa. (G. H. Hardy)",
-
-"Se eu vi mais longe, foi por estar sobre os ombros de gigantes. (Isaac Newton)",
-
-"A matemática revela seus segredos apenas àqueles que a abordam com amor. (Archimedes)",
-
-"A beleza é o primeiro teste: não há lugar permanente no mundo para a matemática feia.(G. H. Hardy)",
-
-"A matemática é o alfabeto com o qual Deus escreveu o mundo. (Galileo Galilei)",
-
-"Um matemático é uma máquina que transforma café em teoremas. (Paul Erdős)",
-
-"Não podemos resolver nossos problemas com o mesmo pensamento que usamos quando os criamos. (Albert Einstein)",
-
-"A matemática é a ciência dos padrões. (Keith Devlin)",
-
-"Na matemática, você não entende as coisas. Você simplesmente se acostuma com elas (John von Neumann)",
-
-"A matemática é a arte de dar o mesmo nome a coisas diferentes. (Henri Poincaré)",
-
-"A matemática é o mais poderoso e belo instrumento da mente humana. (Stefan Banach)",
-
-"A matemática começa onde termina o bom senso. (Bertrand Russell)",
-
-"A matemática é a música da razão. (James Joseph Sylvester)",
-
-"A matemática é o lugar onde você pode fazer coisas que não pode fazer no mundo real. (Marcus du Sautoy)",
-
-"Os números governam o mundo. (Pitágoras)",
-
-"A matemática é infinita como o próprio pensamento humano. (David Hilbert)",
-
-"Devemos saber. Saberemos. (David Hilbert)",
-
-"A matemática não é sobre números, equações, cálculos ou algoritmos: é sobre entendimento. (William Paul Thurston)",
-
-"A descoberta matemática é uma viagem, não um destino. (Terence Tao)",
-
-"A matemática é a chave e a porta para as ciências. (Roger Bacon)",
-
-"A matemática é o tribunal final do pensamento. (Charles Sanders Peirce)",
-
-"A matemática é a ciência que tira conclusões necessárias. (Benjamin Peirce)",
-
-"A matemática é a mais segura das ciências, porque suas provas são baseadas na razão pura.(René Descartes)",
-
-"A matemática é a base de todo conhecimento exato. (Leonhard Euler)",
-
-"A matemática é o espelho da mente humana. (Richard Courant)",
-
-"A matemática é a ciência da ordem e da medida. (Aristóteles)"
-  ];
+  "A imaginação é mais importante que o conhecimento. (Albert Einstein)",
+  "O puro pensamento lógico não pode nos fornecer nenhum conhecimento do mundo empírico. (Albert Einstein)",
+  "Tudo é número. (Pitágoras)",
+  "Um matemático, como um pintor ou poeta, é um criador de padrões. (G. H. Hardy)",
+  "A prova deve convencer, não apenas verificar. (George Pólya)",
+  "Resolver problemas é a essência da aprendizagem. (George Pólya)",
+  "Sem problemas não há aprendizagem. (George Pólya)",
+  "A vida só pode ser compreendida olhando para trás, mas deve ser vivida olhando para frente. (Søren Kierkegaard)",
+  "A simplicidade é a máxima sofisticação. (Leonardo da Vinci)",
+  "Nada é mais prático do que uma boa teoria. (Kurt Lewin)",
+  "A ciência não conhece país, porque o conhecimento pertence à humanidade. (Louis Pasteur)",
+  "A lógica leva você de A a B. A imaginação leva você a qualquer lugar. (Albert Einstein)",
+  "A educação é o que resta depois que esquecemos tudo o que aprendemos na escola. (Albert Einstein)",
+  "O importante é não parar de questionar. (Albert Einstein)",
+  "A ordem é a base de tudo. (Aristóteles)",
+  "Conhecimento é poder. (Francis Bacon)",
+  "A dúvida é o princípio da sabedoria. (Aristóteles)",
+  "Não há nada mais poderoso do que uma ideia cujo tempo chegou. (Victor Hugo)"
+];
   var warningMessage = "Se não estudar, o bicho da DP aparece sem avisar.";
 
   if (!canvas) {

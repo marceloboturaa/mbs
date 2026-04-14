@@ -208,7 +208,8 @@ video {
   justify-content: center;
   min-height: calc(100vh - 11rem);
   min-height: calc(100dvh - 11rem);
-  padding: 2rem 0 0.15rem;
+  margin-bottom: 0.35rem;
+  padding: 2rem 0 0;
 }
 
 .eyebrow {
