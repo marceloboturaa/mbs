@@ -406,16 +406,54 @@ h2 {
   }
 
   .exercise-nav {
-    padding: 0.35rem;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    padding: 0.35rem 0;
+    overflow-x: visible;
   }
 
   .exercise-nav-link {
-    flex-basis: 100%;
+    flex: 1 1 calc(50% - 0.225rem);
+    min-height: 3rem;
+    padding: 0.5rem 0.65rem;
+    white-space: normal;
   }
 
   .exercise-nav-list {
-    order: 3;
+    order: 1;
     flex-basis: 100%;
+  }
+
+  .exercise-nav-prev {
+    order: 2;
+  }
+
+  .exercise-nav-next {
+    order: 3;
+  }
+
+  .exercise-nav .print-button {
+    order: 4;
+    width: 100%;
+    margin-left: 0;
+    justify-content: center;
+    min-height: 2.75rem;
+    padding: 0.55rem 0.8rem;
+  }
+
+  .exercise-nav-title,
+  .exercise-nav-meta {
+    display: block;
+    white-space: normal;
+  }
+
+  .exercise-nav-meta {
+    margin-top: 0.08rem;
+  }
+
+  .exercise-nav-meta::before {
+    content: "";
+    margin: 0;
   }
 }
 
